@@ -5,7 +5,7 @@
                         @if ($volunteer->imageVol == 0 || $volunteer == null)
                             <img src="<?php echo asset('images/dashboard/noProfileImage.jpg'); ?>" alt="No hay imagen" class="avatarInShowAllUsers">
                         @else
-                            <img src="{{ asset('storage/avatar/' . $volunteer->imageVol) }}" alt="{{ $volunteer->nameVol }}"
+                            <img src="{{ asset('img_directory/' . $volunteer->imageVol) }}" alt="{{ $volunteer->nameVol }}"
                                 class="avatarInShowAllUsers">
                         @endif
                     </div>
@@ -25,6 +25,48 @@
                                        
                 </div>
                 <div class="hidden">
+
+                    <div class="eachRow">
+                        <div>
+                            <strong> Empresa asociada: </strong>
+                        @if ($volunteer->organiVol == false)
+                            SIN Empresa Asociada
+                        @else
+                            {{ $volunteer->organiVol }}
+                        @endif
+                        </div>
+                    </div>
+
+                    <div class="eachRow">
+                        <div class="mailVol">
+                            <i class='bx bx-envelope' style="font-size: 20px"></i>
+                            <a href="mailto:{{ $volunteer->persMailVol }}" style="color:white">{{ $volunteer->persMailVol }}</a>
+                            @if ($volunteer->corpMailVol)
+                                (C)
+                                <a href="mailto:{{ $volunteer->corpMailVol }}">{{ $volunteer->corpMailVol }}</a>
+                            @endif
+                        </div>
+                    </div>
+
+                    <div class="eachRow">
+                        <div class="mailVol">
+                            <i class='bx bx-envelope' style="font-size: 20px"></i>
+                            <a href="mailto:{{ $volunteer->persMailVol }}" style="color:white">{{ $volunteer->persMailVol }}</a>
+                            @if ($volunteer->corpMailVol)
+                                (C)
+                                <a href="mailto:{{ $volunteer->corpMailVol }}">{{ $volunteer->corpMailVol }}</a>
+                            @endif
+                        </div>
+                    </div>
+
+                    <div class="eachRow">
+                        <div class="tlfVol">
+                            <strong> Teléfono: </strong>
+                            <i class='bx bxs-phone' style="font-size: 20px"></i>
+                            <a href="tel:+34{{ $volunteer->telVol }}" style="color:white">{{ $volunteer->telVol }}</a>
+                        </div>
+                    </div>
+
                     <div class="eachRow">
                         <div>
                             <strong>Fecha de nacimiento: </strong>
@@ -109,6 +151,7 @@
                             @if (count($volunteer->documents) == 0)
                                 No tiene titulación registrada
                             @else
+                                <div class="accordionPanel">
                                 @foreach ($volunteer->documents as $document)
                                 <button class="accordionUsers">{{ $document->titleDoc }} <i class='bx bxs-down-arrow' id='arrowDownload'></i> </button>  
                                 <div class="downloadPanel">                                  
@@ -120,6 +163,7 @@
                                     </form>
                                 </div>
                                 @endforeach
+                                </div>
                             @endif
                         </div>
                     </div>

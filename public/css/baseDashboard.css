@@ -1237,6 +1237,7 @@ div.logo-details {
 
 .avatarInShowAllUsers {
     width: 64px;
+    height: 64px;
     border-radius: 35px;
 }
 
@@ -1398,11 +1399,12 @@ div.logo-details {
     text-align: left;
     flex-direction: row;
     justify-content: space-between;
-    background-color: cornflowerblue;
+    background-color: white;
     color:#004a98;
-    border-radius: 25px;
+    border-radius: 0px;
     margin: 20px;
     min-height: 100px;
+    box-shadow: 0 4px 2px -2px gray;
 }
 
 #search_list .row .avatarUserRow{
@@ -1456,7 +1458,7 @@ div.logo-details {
 }
 
 #search_list .hidden .downloadButton{
-    width:25%;
+    width:150px;
 
 }
 
@@ -1470,12 +1472,16 @@ div.logo-details {
 
 }
 
+.accordionPanel{
+    display: flex;
+    float: left;
+    flex-direction: column;
+}
+
 #arrowDownload{
     font-size: 15px;
     padding-left: 10px;
 }
-
-
 
 @media only screen and (max-width: 1000px) {
     #search_list .row {
