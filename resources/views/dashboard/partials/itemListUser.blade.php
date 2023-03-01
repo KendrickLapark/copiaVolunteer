@@ -152,17 +152,19 @@
                                 No tiene titulación registrada
                             @else
                                 <div class="accordionPanel">
-                                @foreach ($volunteer->documents as $document)
-                                <button class="accordionUsers">{{ $document->titleDoc }} <i class='bx bxs-down-arrow' id='arrowDownload'></i> </button>  
-                                <div class="downloadPanel">                                  
-                                    <form method="POST" action="{{ route('dashboard.showDocument') }}">
-                                        @csrf
-                                        <input type="hidden" name="doc" value="{{ $document->doc_id }}">
-                                        <button type="submit" {{--id="showDocDoc"--}} class="downloadButton"><i
-                                                class='bx bx-save'></i></button>
-                                    </form>
-                                </div>
-                                @endforeach
+                                    @foreach ($volunteer->documents as $document)
+                                        <button class="accordionUsers">{{ $document->titleDoc }} 
+                                            <i class='bx bxs-down-arrow' id='arrowDownload'></i> 
+                                        </button>  
+                                        <div class="downloadPanel">                                  
+                                            <form method="POST" action="{{ route('dashboard.showDocument') }}">
+                                                @csrf
+                                                <input type="hidden" name="doc" value="{{ $document->doc_id }}">
+                                                <button type="submit" {{--id="showDocDoc"--}} class="downloadButton"><i
+                                                        class='bx bx-save'></i></button>
+                                            </form>
+                                        </div>
+                                    @endforeach
                                 </div>
                             @endif
                         </div>

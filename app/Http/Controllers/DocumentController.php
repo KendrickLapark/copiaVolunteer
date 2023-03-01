@@ -64,7 +64,8 @@ class DocumentController extends Controller
         $filename = Document::select('nameDoc')
         ->where('doc_id',$request->doc)
         ->first();
-        $filename=($filename['nameDoc']);
+        $filename=($filename['nameDoc']);        
+
         return Storage::download('pdf/'.$filename);
     }
 
