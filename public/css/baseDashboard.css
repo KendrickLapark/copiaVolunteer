@@ -1361,7 +1361,7 @@ div.logo-details {
 
   }
 
-#search_list .row{
+#search_list .rowUser{
     padding-top: 15px;
     padding-bottom: 10px;
     padding-left: 30px;
@@ -1455,14 +1455,36 @@ div.logo-details {
     padding-left: 10px;
 }
 
+@media only screen and (min-width: 1000px) and (max-width: 1400px){
+
+    #search_list .rowUser{
+       width: 50%; 
+       padding: auto;
+       align-items: center;  
+    }
+
+    #search_list .hidden {
+        width: 60%;
+    }
+
+}
+
 @media only screen and (max-width: 1000px) {
-    #search_list .row {
+
+    #search_list .mainData{
+        margin: auto;
+
+    }
+
+    #search_list .rowUser{
         flex-direction: column;
         align-items: center;
+        line-height: 250%;
         padding-left: 0;
         padding-top: 30px;
         padding-bottom: 30px;
-        width: auto;
+        width: 80%;
+        
     }
 
     #search_list .hidden {
@@ -1470,6 +1492,7 @@ div.logo-details {
         padding-left: 0;
         padding-top: 30px;
         padding-bottom: 30px;
+        margin:auto;
         width: auto;
     }
 }
@@ -1573,7 +1596,7 @@ div.logo-details {
     align-items: center;
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (min-width: 1000px) and (max-width: 1400px), (max-width: 1000px){
     .mainData.center{
         flex-direction: column;
     }
@@ -1722,6 +1745,24 @@ div.logo-details {
     color:white;
     padding-block: 10px;
     border:none;
+}
+
+@media only screen and (max-width: 1000px){
+.mainTrayDateActivities{
+    flex-direction: column;
+    row-gap: 4em;
+
+}
+
+.columnDateActivities{
+    width: 70%;
+    margin: auto;
+}
+
+.hiddenDaysActivities{
+    margin: auto;
+}
+
 }
 
 /* End showActivitiesByDate */

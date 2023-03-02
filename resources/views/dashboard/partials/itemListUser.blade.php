@@ -1,6 +1,6 @@
 @foreach ($volunteers as $volunteer)
             <div class="mainData">
-                <div class="row">
+                <div class="rowUser">
                     <div class="avatarUserRow">
                         @if ($volunteer->imageVol == 0 || $volunteer == null)
                             <img src="<?php echo asset('images/dashboard/noProfileImage.jpg'); ?>" alt="No hay imagen" class="avatarInShowAllUsers">
