@@ -53,14 +53,15 @@
 
                         $(".hidden").hide();
 
-                        /* sicronizar con el archivo javascript de rotación de iconos del rowUser en itemListUsers */
+                        /* sicronizar con el archivo javascript de rotación de iconos del rowUser en itemListUsers, falta que al pursar el icono 
+                        lessDetails no se desincronice el icono del rowUser */
 
-                            $(".rowUser").on("click", function(){
+                            $(".bx.bxs-down-arrow").on("click", function(){
                                
-                                if($(this).next().is(':hidden'))
-                                    $(this).next().show('slow');
+                                if($(this).parent().parent().next().is(':hidden'))
+                                    $(this).parent().parent().next().show('slow');
                                 else{
-                                    $(this).next().hide('slow');
+                                    $(this).parent().parent().next().hide('slow');
                                 }
                             });
 
