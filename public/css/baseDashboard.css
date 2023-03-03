@@ -1013,6 +1013,17 @@ div.logo-details {
 #downArrow{
     margin-left: auto;
     font-size: 20px;
+    transition: all 0.2s ease-in-out;
+    
+}
+
+#downArrow.down{
+    transform: rotate(180deg);
+
+}
+
+#downArrow:hover{
+    color: #2697FF;
 
 }
 
@@ -1785,7 +1796,7 @@ div.logo-details {
     font-weight: bold;
     margin: 2%;
     margin-left: 16%;
-    margin-bottom: 5%;
+    margin-bottom: 2%;
 
 }
 
@@ -1846,28 +1857,34 @@ div.logo-details {
 
 }
 
+@media only screen and (min-width: 1000px) and (max-width: 1600px), (max-width: 1000px){
+
+    .leftColumnCatAct{
+        width:100%;
+    }
+    
+    .rightColumnCatAct{
+        display:flex;
+        align-items: center;
+        margin:auto;
+    
+    }
+       
+    .container.mainData{
+        display: flex;
+        flex-direction: column;
+        row-gap: 3em;
+    }
+    
+    .imgContainer{
+        flex-direction: column;
+    }
+
+}
+
 @media only screen and (max-width: 1000px) {
 
-.leftColumnCatAct{
-    width:100%;
 
-}
-
-.rightColumnCatAct{
-    display:flex;
-    align-items: center;
-    margin:auto;
-
-}
-   
-.container.mainData{
-    display: flex;
-    flex-direction: column;
-}
-
-.imgContainer{
-    flex-direction: column;
-}
 
 }
 

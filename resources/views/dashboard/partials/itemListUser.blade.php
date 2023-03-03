@@ -20,11 +20,11 @@
                     </div>
 
                     <div class="controlButtonMoreDetails">
-                        <i class='bx bxs-down-arrow'></i>
+                        <i class='bx bxs-down-arrow' id="downArrow"></i>
                     </div>
                                        
                 </div>
-                <div class="hidden">
+                <div class="hidden" id="hiddenUser">
 
                     <div class="eachRow">
                         <div>
@@ -247,3 +247,5 @@
                 </div>
             </div>
         @endforeach
+
+        <script type="text/javascript" src="{{ URL::asset('js/iconos.js') }}"></script>
