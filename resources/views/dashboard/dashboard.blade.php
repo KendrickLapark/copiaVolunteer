@@ -45,12 +45,11 @@
     <script>
         $(() => {
             $(".row_act_dashboard").on("click", function() {
-                var icono = document.querySelector(".bx.bx-caret-down");
+                var icono = document.querySelector(".row_act_dashboard > #bx.bx-caret-down");
                 if ($(this).siblings().is(':visible')) {
                     $(this).siblings().hide();
                     icono.style.transform = ''
-                }
-                else {
+                } else {
                     $(this).siblings().show();
                     icono.style.transform = 'rotate(180deg)'
                 }
