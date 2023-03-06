@@ -130,7 +130,7 @@ $(()=>{
             }
             arrayIntervalos.push( fecha )
 
-        }
+        }     
 
         return arrayIntervalos;
 

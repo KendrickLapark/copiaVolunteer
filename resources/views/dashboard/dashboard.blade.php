@@ -17,7 +17,7 @@
             </div>
         </div>
     @endif
-    <div class="listTrayDashboard">
+    <div class="listTrayDashboard" id="#listTrayDashboard">
         @if (count($inscriptions) == 0)
             <div class="sectionTitle">
                 No tienes INSCRIPCIONES HECHAS EN NINGUNA Actividad
@@ -45,13 +45,34 @@
     <script>
         $(() => {
             $(".row_act_dashboard").on("click", function() {
+                var icono = document.querySelector(".bx.bx-caret-down");
                 if ($(this).siblings().is(':visible')) {
                     $(this).siblings().hide();
+                    icono.style.transform = ''
                 }
                 else {
                     $(this).siblings().show();
+                    icono.style.transform = 'rotate(180deg)'
                 }
             });
+
+            $('.bx.bx-caret-right').on("click", function(){
+ 
+                    var listaInscripciones = document.querySelector(".listTrayDashboard");
+                    var icono = document.querySelector(".bx.bx-caret-right");
+
+                    if(listaInscripciones.style.visibility == 'visible'){
+                        console.log('visible')
+                        listaInscripciones.style.visibility = 'hidden';
+                        icono.style.transform = ''
+                    }else{
+                        console.log('invisible')
+                        listaInscripciones.style.visibility = 'visible'
+                        icono.style.transform = 'rotate(180deg)'
+                    }
+
+            });
+
         });
     </script>
 @endsection

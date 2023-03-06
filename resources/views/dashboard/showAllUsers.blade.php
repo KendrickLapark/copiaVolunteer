@@ -54,19 +54,22 @@
                         $(".hidden").hide();
 
                         /* sicronizar con el archivo javascript de rotación de iconos del rowUser en itemListUsers, falta que al pursar el icono 
-                        lessDetails no se desincronice el icono del rowUser */
+                        lessDetails no se desincronice el icono del rowUser */                      
 
                             $(".bx.bxs-down-arrow").on("click", function(){
                                
-                                if($(this).parent().parent().next().is(':hidden'))
+                                if($(this).parent().parent().next().is(':hidden')){
+                                    $(this).css("transform", "rotate(180deg)");
                                     $(this).parent().parent().next().show('slow');
+                                }
                                 else{
+                                    $(this).css("transform", "");
                                     $(this).parent().parent().next().hide('slow');
                                 }
                             });
 
                             $(".lessDetails").on("click", function() {
-                                $('#downArrow').css("transform", "");
+                                $('.bx.bxs-down-arrow').css("transform", "");
                                 $(this).parent().parent().hide('slow');
                             });
 

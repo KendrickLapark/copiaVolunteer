@@ -990,6 +990,7 @@ div.logo-details {
 
 .listTrayDashboard{
     width:75%;
+    visibility:hidden;
 }
 
 .row_act_entity{
@@ -1466,7 +1467,7 @@ div.logo-details {
     padding-left: 10px;
 }
 
-@media only screen and (min-width: 1000px) and (max-width: 1400px){
+@media only screen and (min-width: 1000px) and (max-width: 1400px){   
 
     #search_list .rowUser{
        width: 50%; 
@@ -1482,6 +1483,10 @@ div.logo-details {
 
 @media only screen and (max-width: 1000px) {
 
+    #search{
+        width:80%;
+    }
+
     #search_list .mainData{
         margin: auto;
 
@@ -1491,10 +1496,8 @@ div.logo-details {
         flex-direction: column;
         align-items: center;
         line-height: 250%;
-        padding-left: 0;
-        padding-top: 30px;
-        padding-bottom: 30px;
-        width: 80%;
+        width: 100%;
+        margin: auto;
         
     }
 
@@ -1610,6 +1613,11 @@ div.logo-details {
 @media only screen and (min-width: 1000px) and (max-width: 1400px), (max-width: 1000px){
     .mainData.center{
         flex-direction: column;
+    }
+
+    #img1{
+        width: 80%;
+
     }
 
     .titleActivitiesOptions{
@@ -1850,6 +1858,10 @@ div.logo-details {
     display: flex;
     flex-direction: column;
     row-gap: 0.5rem;
+}
+
+.imgContainerCell > img:hover{
+    filter: sepia(100%) hue-rotate(190deg) saturate(500%);
 }
 
 .imgSrc:hover{

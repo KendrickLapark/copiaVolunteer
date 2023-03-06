@@ -20,51 +20,51 @@
                     <p class="titleOptCategories"> Selecciona: </p>
 
                     <div class="eachActOption">
-                        <input type="radio" class="inputCatAct" name="Voluntariado medioambiental">
+                        <input type="radio" class="inputCatAct"  name="radioCategory"  value="Voluntariado medioambiental">
                         <label for="Voluntariado medioambiental" class="labelCatAct"> Voluntariado medioambiental </label>
                     </div>
                     <div class="eachActOption">
-                        <input type="radio" class="inputCatAct" name="Voluntariado comunitario">
+                        <input type="radio" class="inputCatAct" name="radioCategory"  value="Voluntariado comunitario">
                         <label for="Voluntariado comunitario" class="labelCatAct"> Voluntariado comunitario </label>
                     </div>
                     <div class="eachActOption">
-                        <input type="radio" class="inputCatAct" name="Voluntariado sociosanitario">
+                        <input type="radio" class="inputCatAct" name="radioCategory"  value="Voluntariado sociosanitario">
                         <label for="Voluntariado sociosanitario" class="labelCatAct"> Voluntariado sociosanitario </label>
                     </div>
                     <div class="eachActOption">
-                        <input type="radio" class="inputCatAct" name="Voluntariado cultural">
+                        <input type="radio" class="inputCatAct" name="radioCategory"  value="Voluntariado cultural">
                         <label for="Voluntariado cultural" class="labelCatAct"> Voluntariado cultural </label>
                     </div>
                     <div class="eachActOption">
-                        <input type="radio" class="inputCatAct" name="Voluntariado educativo">
+                        <input type="radio" class="inputCatAct" name="radioCategory"  value="Voluntariado educativo">
                         <label for="Voluntariado educativo" class="labelCatAct"> Voluntariado educativo </label>
                     </div>
                     <div class="eachActOption">
-                        <input type="radio" class="inputCatAct" name="Voluntariado internacional">
+                        <input type="radio" class="inputCatAct" name="radioCategory"  value="Voluntariado internacional">
                         <label for="Voluntariado internacional" class="labelCatAct"> Voluntariado internacional </label>
                     </div>
                     <div class="eachActOption">
-                        <input type="radio" class="inputCatAct" name="Cooperación al desarrollo">
+                        <input type="radio" class="inputCatAct" name="radioCategory"  value="Cooperación al desarrollo">
                         <label for="Cooperación al desarrollo" class="labelCatAct"> Cooperación al desarrollo </label>
                     </div>
                     <div class="eachActOption">
-                        <input type="radio" class="inputCatAct" name="Comercio justo">
+                        <input type="radio" class="inputCatAct" name="radioCategory"  value="Comercio justo">
                         <label for="Comercio justo" class="labelCatAct"> Comercio justo </label>
                     </div>
                     <div class="eachActOption">
-                        <input type="radio" class="inputCatAct" name="Voluntariado de ocio">
+                        <input type="radio" class="inputCatAct" name="radioCategory"  value="Voluntariado de ocio">
                         <label for="Voluntariado de ocio" class="labelCatAct"> Voluntariado de ocio </label>
                     </div>
                     <div class="eachActOption">
-                        <input type="radio" class="inputCatAct" name="Voluntariado de protección civil">
+                        <input type="radio" class="inputCatAct" name="radioCategory"  value="Voluntariado de protección civil">
                         <label for="Voluntariado de protección civil" class="labelCatAct"> Voluntariado de protección civil </label>
                     </div>
                     <div class="eachActOption">
-                        <input type="radio" class="inputCatAct" name="Voluntariado social">
+                        <input type="radio" class="inputCatAct" name="radioCategory"  value="Voluntariado social">
                         <label for="Voluntariado social" class="labelCatAct"> Voluntariado social </label>
                     </div>
                     <div class="eachActOption">
-                        <input type="radio" class="inputCatAct" name="Adicciones y dependencias">
+                        <input type="radio" class="inputCatAct" name="radioCategory"  value="Adicciones y dependencias">
                         <label for="Adicciones y dependencias" class="labelCatAct"> Adicciones y dependencias </label>
                     </div>
 
@@ -75,7 +75,7 @@
                         <div class="imgContainerLeft">
                             <div class="imgColumn">
                                 <div class="imgContainerCell">
-                                    <img class="imgSrc" src="images/imgActivitiesCategories/Component1.png">
+                                    <img src="images/imgActivitiesCategories/Component1.png">
                                 </div>                                               
                                 <div class="imgContainerCell">
                                     <img src="images/imgActivitiesCategories/Component5.png">

@@ -21,14 +21,14 @@
     
                 <div class="columnRight">
                     <a href="{{ route('dashboard.showActivitiesByDate')}}">
-                    <img src="images/imgDashboard/frame2.png" alt="Por tipo de actividad">
+                    <img id="img1" src="images/imgDashboard/frame2.png" alt="Por tipo de actividad">
                     </a>
 
                 </div>
 
                 <div class="columnLeft">
                     <a href="{{ route('dashboard.showActivitiesByCategory')}}">
-                    <img src="images/imgDashboard/frame1.png" alt="Por fecha">
+                    <img id="img1" src="images/imgDashboard/frame1.png" alt="Por fecha">
                     </a>
 
                 </div>

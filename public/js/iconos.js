@@ -7,11 +7,11 @@ $(()=>{
         iconosList.forEach(function(icono) {
         icono.addEventListener('click', function() {
 
-            if(icono.style.transform == ''){
+            /* if(icono.style.transform == ''){
                 icono.style.transform = 'rotate(180deg)'
             }else{
                 icono.style.transform = ''
-            }
+            } */
             
         });
     });   
