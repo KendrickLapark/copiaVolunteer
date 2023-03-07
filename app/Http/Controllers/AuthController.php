@@ -24,6 +24,7 @@ class AuthController extends Controller
     {
         $inscriptions = Inscription::where('volunteer_id', Auth::user()->id)
             ->get();
+
         return view('dashboard.dashboard', compact("inscriptions"));
     }
 

@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-    <div class="mainTray">
+    <div class="mainTrayShowLoggedNotifications">
 
         <div class="sectionTitle">
             PROCESOS QUE COMPLETAR

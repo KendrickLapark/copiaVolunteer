@@ -16,7 +16,7 @@
             </div>
         </div>
     @else
-        <div class="mainTray center">
+        <div class="mainTray center dashboardIncomplete">
             <div class="sectionTitle">
                 Bienvenidos a Voluntariado Magtel
             </div>

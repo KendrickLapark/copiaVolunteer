@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-    <div class="mainTray">
+    <div class="mainTrayShowAllEducation">
         <div class="sectionTitle">
             MUESTRA TODOS LOS ESTUDIOS
         </div>
@@ -20,7 +20,7 @@
             <div class="formSubmitSuccess center">
                 {{ session('uploadEducation') }}
             </div>
-        @endif
+        @endif                      
         <div class="center">
             <form method="POST" action="{{ route('dashboard.createEducation') }}" accept-charset="UTF-8"
                 enctype="multipart/form-data">

@@ -11,19 +11,20 @@
             <div class="sectionTitle">
                {{--  <a href="{{ route('dashboard.logged.showNotify') }}"> --}}
                     <i class='bx bx-envelope' style="font-size: 24px;"></i>
+                    <span class="badge"> " </span>
                         Tiene notificaciones pendientes
                     <i class='bx bx-caret-right' style="font-size: 20px"></i>
                 {{-- </a> --}}
             </div>
         </div>
-    @endif
-    <div class="listTrayDashboard" id="#listTrayDashboard">
-        @if (count($inscriptions) == 0)
-            <div class="sectionTitle">
-                No tienes INSCRIPCIONES HECHAS EN NINGUNA Actividad
-            </div>
-        @else
-            @foreach ($inscriptions as $inscription)               
+    @endif 
+        @if (count($inscriptions) == 0)           
+            <div class="sectionTitleNoInscriptions">
+                No tienes inscripciones hechas en ninguna actividad.
+            </div>                          
+        @else     
+        <div class="listTrayDashboard" id="#listTrayDashboard">         
+            @foreach ($inscriptions as $inscription)                      
                 <div class="mainActivityDashboard">
                     @if($inscription->filenameIns == null)
                         @include('dashboard.partials.itemListInscription')   
@@ -68,7 +69,7 @@
                         console.log('invisible')
                         listaInscripciones.style.visibility = 'visible'
                         icono.style.transform = 'rotate(180deg)'
-                    }
+                    }                   
 
             });
 

@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-    <div class="mainTray">
+    <div class="mainTrayShowAdminNotifications">
         <div class="sectionTitle">
             USUARIOS SIN VALIDAR:
         </div>
