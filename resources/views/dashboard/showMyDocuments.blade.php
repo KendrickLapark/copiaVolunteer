@@ -18,7 +18,7 @@
 
 
         @foreach ($documents as $document)
-            <div class="mainData">
+            <div class="mainDataShowMyDocuments">
                 <div class="row">
                     <div>
                         {{ $document->titleDoc }}

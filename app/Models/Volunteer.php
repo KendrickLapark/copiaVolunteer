@@ -127,5 +127,6 @@ class Volunteer extends Authenticatable
         return $this->hasMany(Inscription::class, 'volunteer_id','id' );
     }
 
+    
 
 }

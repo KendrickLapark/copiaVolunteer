@@ -1033,17 +1033,33 @@ div.logo-details {
     width: 25%;
     margin-left:2%;
     text-align: center;
+    
 }
 
 .badge{
     position: absolute;
-    left:1.9%;
+    margin-top: 0.1%;
+    left:3.5%;
+    width:0.7%;
+    height: 6%;
+    max-height: 6%;
     background-color: red;
+    border-color: black;
     color: white;
     font-weight: bold;
     font-size: 14px;
-    border-radius: 10px;
+    border-radius: 100%;
+    text-align: center; 
 
+}
+
+.bx.bx-envelope{
+    font-size: 36px;
+    vertical-align: middle;
+}
+
+.bx.bx-caret-right{
+    vertical-align: middle;
 }
 
 .sectionTitleNoInscriptions{
@@ -1051,6 +1067,7 @@ div.logo-details {
     color:#004a98;
     font-size: 18px;
     font-weight: bold;
+    width:75%;
 
 }
 
@@ -1064,7 +1081,7 @@ div.logo-details {
 
 }
 
-.row_act_dashboard{
+.row_act_dashboard, .msg_Inscription{
     display: flex;
     align-items: center;
     width: 90%;
@@ -1094,7 +1111,7 @@ div.logo-details {
 
 }
 
-.hidden_row_desc_act{
+.hidden_row_desc_act, .hidden_msg_Inscription{
     display:none;
     background-color: #ececec;
     line-height: 180%;
@@ -1123,6 +1140,15 @@ div.logo-details {
 
 }
 
+.inner_hidden_msg_Inscription{
+    display: flex;
+    flex-direction: column;
+    column-gap: 5em;
+    background-color: white;
+    border-radius: 25px;
+    padding: 2%;
+}
+
 #dashboard_downloadPDF{
     background-color: white;
     width: fit-content;
@@ -1130,15 +1156,6 @@ div.logo-details {
     color:#000000;
     border-radius: 25px;
     border: 1px grey solid;
-
-}
-
-.msg_noInscription{
-    font-size: 24px;
-    color:#004a98;
-    justify-content: center;
-    text-align: center;
-    margin-left: 22%;
 
 }
 
@@ -1309,6 +1326,16 @@ div.logo-details {
 }
 
 /* endShowMyEducations */
+
+/* showMyDocuments */
+
+.mainDataShowMyDocuments > .row{
+    text-align: center;
+    margin: auto;
+
+}
+
+/* end showMyDocuments */
 
 /* showMyProfile */
 

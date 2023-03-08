@@ -135,7 +135,35 @@
             events: SITEURL + "/fullcalender",
             displayEventTime: false,
             editable: true,
-            events: [],
+            events: [
+            @foreach ($activities as $activity)
+                {
+                    color: '#064b98',
+                    id: '{{ $activity->activity_id }}',
+                    title: '{{ $activity->nameAct }}',
+                    start: '{{ $activity->dateAct }}T{{ $activity->timeAct }}',
+                    @if ($activity->isNulledAct)
+                        color: '#8A8A8A',
+                    @else
+                        @if(count($activity->inscriptions)>0)
+                            @foreach ($activity->inscriptions as $eachInscription)
+                                @if ($eachInscription->volunteer_id==Auth::user()->id)
+                                    @if ($eachInscription->isDoneIns == 1)
+                                        color: '#00A300',
+                                    @elseif ($eachInscription->isCompletedIns == 1) 
+                                        color: '#8f1d21',
+                                    @elseif (is_null($eachInscription->filenameIns) && is_null($eachInscription->isCompletedIns))
+                                        color: '#000000', 
+                                    @elseif ($eachInscription->filenameIns && $eachInscription->isCompletedIns == 0)
+                                        color: '#ffa500', 
+                                    @endif    
+                                @endif
+                            @endforeach
+                        @endif
+                    @endif
+                },
+            @endforeach
+            ],
             editable: false,
             selectable: true,
             selectHelper: true,

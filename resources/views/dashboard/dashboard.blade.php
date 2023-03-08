@@ -9,16 +9,23 @@
     @if (App\Http\Controllers\NotifyController::notifyLoggedTrigger())
         <div class="notifyTray">
             <div class="sectionTitle">
-               {{--  <a href="{{ route('dashboard.logged.showNotify') }}"> --}}
-                    <i class='bx bx-envelope' style="font-size: 24px;"></i>
-                    <span class="badge"> " </span>
+                    <i class='bx bx-envelope'></i>
+                    {{-- <span class="badge"> </span> --}}
                         Tiene notificaciones pendientes
                     <i class='bx bx-caret-right' style="font-size: 20px"></i>
-                {{-- </a> --}}
+            </div>
+        </div>
+    @else
+        <div class="notifyTray">
+            <div class="sectionTitle">
+                    <i class='bx bx-envelope'></i>
+                    {{-- <span class="badge"> </span> --}}
+                        No tiene notificaciones pendientes
+                    <i class='bx bx-caret-right'></i>
             </div>
         </div>
     @endif 
-        @if (count($inscriptions) == 0)           
+        @if (count($inscriptions) == 0)         
             <div class="sectionTitleNoInscriptions">
                 No tienes inscripciones hechas en ninguna actividad.
             </div>                          
@@ -29,9 +36,48 @@
                     @if($inscription->filenameIns == null)
                         @include('dashboard.partials.itemListInscription')   
                     @elseif($inscription->filenameIns != null)
-                        <div class="msg_noInscription">
-                            No tienes inscripciones pendientes
-                        </div>                                                           
+                        <div class="msg_Inscription">
+                            Inscripcion realizada para actividad : {{$inscription->activity->nameAct}}
+                            <i class='bx bx-caret-down' id="downArrow" ></i>
+                        </div> 
+                        <div class="hidden_msg_Inscription">
+                            <div class="inner_hidden_msg_Inscription">
+                                <div class="descIns">
+                                    <strong> Descripción: </strong>
+                                    {{$inscription->activity->descAct}}
+                                </div>
+                                <div class="entityIns">
+                                    <strong> Entidad: </strong>
+                                    {{$inscription->activity->entityAct}}
+                                </div>
+                                <div class="direIns">
+                                    <strong> Dirección: </strong>
+                                    {{$inscription->activity->direAct}}
+                                </div>
+                                <div class="dateIns">
+                                    <strong> Fecha: </strong>
+                                    {{$inscription->activity->dateAct}}
+                                </div>
+                                <div class="timeIns">
+                                    <strong> Hora: </strong>
+                                    {{$inscription->activity->timeAct}}
+                                </div>
+                                <div class="isCompletedIns">
+                                    @if($inscription->isCompletedIns)
+                                        <strong> Inscripción completada </strong>
+                                    @else
+                                        <strong> Inscripción incompleta, esperando aceptación administradora </strong>
+                                    @endif
+                                </div>
+                                <form method="POST" action="{{ route('PDF.generatepreinscription') }}">
+                                    @csrf
+                                    <input type="hidden" name="id" value="{{ $inscription->inscription_id }}">
+                                    <button type="submit" id="dashboard_downloadPDF">
+                                    <i class='bx bx-caret-down'></i> Descargar documento</button>
+                                </form>
+                            </div>
+                        </div>
+                                                                                   
                     @endif
                 </div>                               
             @endforeach
@@ -71,6 +117,17 @@
                         icono.style.transform = 'rotate(180deg)'
                     }                   
 
+            });
+
+            $(".msg_Inscription").on("click", function() {
+                var icono = document.querySelector(".row_act_dashboard > #bx.bx-caret-down");
+                if ($(this).siblings().is(':visible')) {
+                    $(this).siblings().hide();
+                    icono.style.transform = ''
+                } else {
+                    $(this).siblings().show();
+                    icono.style.transform = 'rotate(180deg)'
+                }
             });
 
         });

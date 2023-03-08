@@ -208,7 +208,11 @@ class ActivityController extends Controller
     }
 
     public function showActivitiesByDate(){
-        return view('dashboard.showActivitiesByDate');
+        $activities = Activity::select('activities.activity_id','activities.nameAct','activities.descAct','activities.dateAct','activities.timeAct','activities.isNulledAct')
+                                ->where('activities.isVisible', 1)
+                                ->get();
+        $activityTypes = TypeActivity::all();
+        return view('dashboard.showActivitiesByDate', compact("activities", "activityTypes"));
     }
 
     public static function quotaCalculator($quota,$activity_id)

@@ -7,9 +7,11 @@
         <div class="inner_hidden_leftCol">
             <div class="row_act_desc"> <strong> Descripción: </strong>{{ $inscription->activity->nameAct }}</div>
             <div class="row_act_title"> <strong> Requisito previo: </strong> {{ $inscription->activity->requiPrevAct }}</div>
-            <div class="row_act_timeAct"> <strong> Formación deseada: </strong> {{ $inscription->activity->formaAct }}</div>
-            <div class="row_act_dateAct"> <strong> Tipo de actividad: </strong>{{ date('d-m-Y', strtotime($inscription->activity->dateAct))}}</div>
+            <div class="row_type_act"> <strong> Tipo de actividad: </strong> {{$inscription->activity->typeAct[0]->nameTypeAct}} </div>
+            <div class="row_act_timeAct"> <strong> Formación deseada: </strong> {{ $inscription->activity->formaAct }} </div>
+            <div class="row_act_dateAct"> <strong> Fecha de la actividad: </strong>{{ date('d-m-Y', strtotime($inscription->activity->dateAct))}}</div>
             <div class="row_act_status"> 
+                <strong> Estado de la inscripción: </strong>
                 @if ($inscription->isDoneIns)
                     HAS PARTICIPADO EN ESTA ACTIVIDAD
                 @elseif($inscription->activity->isNulledAct)
