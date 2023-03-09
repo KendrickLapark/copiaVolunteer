@@ -1004,6 +1004,7 @@ div.logo-details {
 
 .formSubmitSuccess.center {
     background-color: #01b6ed;
+    font-size: 20px;
     margin-top: 5px;
     margin-bottom: 5px;
     padding-top: 5px;
@@ -1011,8 +1012,6 @@ div.logo-details {
     border: 1px solid #000000;
     color: #ffffff;
 }
-
-
 
 /* End Notifications */
 
@@ -1803,13 +1802,17 @@ div.logo-details {
 }
 
 .accordion{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;  
     width:100%;
     background-color: #009fe3;
     text-align: left;
     color:white;
     padding-block: 12px;
-    padding-left: 10px;
+    padding-inline: 10px;
     border:none;
+    vertical-align: middle;
 
 }
 
@@ -1898,37 +1901,50 @@ div.logo-details {
 .container.mainData{
     display: flex;
     width: 100%;
+    justify-content: center;
+    column-gap: 2em;
 
 }
 
-.titleOptCategories{
+.titleOptCategories, .titleOptDelegations{
     font-size: 20px;
-    font-weight: bold;
-    margin: 2%;
+    padding: auto;   
+    /* margin: 2%;
     margin-left: 16%;
+    margin-bottom: 2%; */
     margin-bottom: 2%;
+    
 
 }
 
 .leftColumnCatAct{
     display: flex;
     flex-direction: column;
+    row-gap: 1em;
     width:20%;
 
+}
+
+.containerCatAct, .containerDelAct{
+    border: 1px solid grey;
+    border-radius: 10px;
+    padding-left: 5%;
+    padding-block: 7%;
 }
 
 .eachActOption{
     display: flex;
     flex-direction: row;
-    justify-content: center;
     width: 100%;
+    column-gap: 0.5em;
 }
 
-.inputCatAct{
-    width: 10%;
+.inputCatAct, .inputDelAct{
+    width: 10px;  
+    
 }
 
-.labelCatAct{
+.labelCatAct, .labelDelAct{
     width:70%;
     text-align: left;
     padding-top: 10px;
@@ -1938,7 +1954,7 @@ div.logo-details {
     display: flex;
     flex-direction: row;
     column-gap: 0.5rem;
-    width: 60%;
+    width: 50%;
 
 }
 

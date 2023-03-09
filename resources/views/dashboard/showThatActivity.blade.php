@@ -85,7 +85,9 @@
                         @else
                             @if (App\Http\Controllers\ActivityController::quotaCalculator($activity->quotasAct, $activity->activity_id) > 0)
                                 @if (App\Http\Controllers\ActivityController::inscriptedYet($activity->activity_id, Auth::user()->id))
-                                    No puedes volver a inscribirte en la misma actividad
+                                    No puedes volver a inscribirte en la misma actividad              
+                                @elseif($activity->dateAct < date('Y-m-d'))
+                                    No puedes inscribirte en una actividad pasada
                                 @else
                                     <form method="POST" action="{{ route('dashboard.makeInscription') }}">
                                         @csrf

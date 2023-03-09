@@ -285,8 +285,7 @@ Route::middleware(['isAdmin'])->group(function () {
         ->name('CSV.getUsers');
     /* Borrar Actividad */
     Route::post('/dashboard-nullActivity',[ActivityController::class, 'nullActivity'])
-        ->name('dashboard.nullActivity');
-        
+        ->name('dashboard.nullActivity');       
 
 });
 

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Delegation;
 use App\Models\TypeActivity;
 use App\Models\Activity;
 use App\Models\Inscription;
@@ -105,7 +106,6 @@ class ActivityController extends Controller
         }catch(\Exception $e){
             return redirect()->route('dashboard.showAllActivities');
         }
-        echo $request->id;
         session()->flash('sucessVisibleActivity', 'Se ha CAMBIADO A VISIBLE una ACTIVIDAD.');
         return redirect()->route('dashboard.showAllActivities');
     }
@@ -203,7 +203,10 @@ class ActivityController extends Controller
     }
 
     public function showActivitiesByCategory(){
-        return view('dashboard.showActivitiesByCategory');
+
+        $delegations = Delegation::all();
+        $activityTypes = TypeActivity::all();
+        return view('dashboard.showActivitiesByCategory', compact("activityTypes", "delegations"));
 
     }
 
@@ -289,16 +292,30 @@ class ActivityController extends Controller
 
     public function nullActivity(Request $request)
     {
-        $activity = Activity::where('activity_id',$request->id)->first();
-        Activity::where('activity_id',$request->id)->first()->update(['isNulledAct'=> true]);
 
-        foreach ($activity->volunteers as $volunteer) {
+        
+        $activity = Activity::where('activity_id',$request->id);
+        $nullAct = $activity->value('isNulledAct');
+
+        if($nullAct == 1){
+            $activity->update(['isNulledAct' => false]);
+            $msg = "Nulidad deshecha.";
+        }else{
+            $activity->update(['isNulledAct' => true]);
+            $msg = "Actividad anulada." ;       
+        }     
+       
+        //Envía e-mail a los usuarios inscritos notificando la anulación de la actividad
+
+         /* foreach ($activity->volunteers as $volunteer) {
             EmailController::nullActivityMail(
                 $activity->nameAct,
                 $volunteer->persMailVol
             ); 
-        }
-        session()->flash('nullActivity', 'Se ha ANULADO una ACTIVIDAD.');
+        } */  
+
+        session()->flash('nullActivity', $msg);
+
         return redirect()->route('dashboard.showAllActivities');
     }
 

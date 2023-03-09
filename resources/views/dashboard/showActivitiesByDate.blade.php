@@ -218,9 +218,7 @@
 
     function displayMessage(message) {
         toastr.success(message, 'Event');
-    }
-    
-    
+    }      
     
 </script>
 

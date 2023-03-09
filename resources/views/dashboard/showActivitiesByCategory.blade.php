@@ -17,9 +17,19 @@
 
                 <div class="leftColumnCatAct">
 
-                    <p class="titleOptCategories"> Selecciona: </p>
+                    <div class="containerCatAct">
+                        <p class="titleOptCategories"> Tipo de actividad </p>
 
-                    <div class="eachActOption">
+                        @foreach($activityTypes as $activityType)
+                            <div class="eachActOption">
+                                <input type="radio" class="inputCatAct"  name="radioCategory"  value={{$activityType->nameTypeAct}}>
+                                <label for={{$activityType->nameTypeAct}} class="labelCatAct"> {{$activityType->nameTypeAct}} </label>
+                            </div>
+                        @endforeach
+
+                    </div>
+
+                    {{-- <div class="eachActOption">
                         <input type="radio" class="inputCatAct"  name="radioCategory"  value="Voluntariado medioambiental">
                         <label for="Voluntariado medioambiental" class="labelCatAct"> Voluntariado medioambiental </label>
                     </div>
@@ -66,6 +76,17 @@
                     <div class="eachActOption">
                         <input type="radio" class="inputCatAct" name="radioCategory"  value="Adicciones y dependencias">
                         <label for="Adicciones y dependencias" class="labelCatAct"> Adicciones y dependencias </label>
+                    </div> --}}
+
+                    <div class="containerDelAct">
+                        <p class="titleOptDelegations"> Delegación </p>
+
+                        @foreach($delegations as $delegation)
+                            <div class="eachActOption">
+                                <input type="radio" class="inputDelAct" name="radioCategory2"  value="{{$delegation->nameDel}}">
+                                <label for="{{$delegation->nameDel}}" class="labelDelAct"> {{$delegation->nameDel}} </label>
+                            </div>
+                        @endforeach
                     </div>
 
                 </div>

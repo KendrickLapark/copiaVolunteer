@@ -128,8 +128,7 @@
                                 </form>
                             </div>
 
-                            <div>
-                                @if (!$activity->isNulledAct)
+                            <div>                        
                                     <strong>ANULAR: </strong>
 
                                     <form method="POST" action="{{ route('dashboard.nullActivity') }}">
@@ -140,9 +139,7 @@
                                             <i class='bx bxs-edit' style="font-size:25px"></i>
                                         </button>
                                     </form>
-                                @else
-                                    <strong>Esta actividad se ha anulado</strong>
-                                @endif
+                               
                             </div>
 
                             <div>

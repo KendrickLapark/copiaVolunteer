@@ -60,7 +60,6 @@
             </div>
         </div>
         
-
         <div class="addNew">
             <form method="get" action="{{ route('dashboard.formCreateActivity') }}" accept-charset="UTF-8"
                 enctype="multipart/form-data">
@@ -90,8 +89,7 @@
                 Cita Normal
             </div>
         </div>
-
-            
+           
         <div class='mainActivityAct'>
             <div id="search_listAct"></div>
  

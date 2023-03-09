@@ -11,7 +11,7 @@
         </div>
         <form method="POST" action="{{ route('dashboard.updateActivity') }}">
             @csrf
-            <div class="mainData center">
+            <div class="mainData center" style="flex-direction: column">
 
                 <input type="hidden" id="activity_id" name="activity_id" value="{{ $activity->activity_id }}">
                 <div class="eachCreateActivityElement">
