@@ -89,6 +89,14 @@
                                             class='bx bx-save'></i></button>
                                 </form>
                                 <hr />
+                                <p>Cancelar preinscripción </p>
+                                <form method="POST" action="{{ route('PDF.generatepreinscription') }}">
+                                    @csrf
+                                    <input type="hidden" name="id" value="{{ $inscription->inscription_id }}">
+                                    <button type="submit" id="downloadPDF" class="botonesControl"><i
+                                            class='bx bx-x-circle'></i></button>
+                                </form>
+                                <hr />
                                 <form method="POST" action="{{ route('dashboard.uploadPreinscription') }}"
                                     accept-charset="UTF-8" enctype="multipart/form-data">
                                     @csrf

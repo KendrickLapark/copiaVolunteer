@@ -44,14 +44,19 @@
                     <span class="links_name">Editar mi perfil</span>
                 </a>
             </li>
-            @if (App\Http\Controllers\NotifyController::notifyLoggedTrigger())
-                <li class="adminMenu">
+            {{-- @if (App\Http\Controllers\NotifyController::notifyLoggedTrigger()) --}}
+                <li>
                     <a href="{{ route('dashboard.logged.showNotify') }}">
-                        <i class='iconAlert bx bxs-bell-ring bx-tada '></i>
-                        <span class="textAlert links_name ">Notificaciones</span>
+                        @if(App\Http\Controllers\NotifyController::notifyLoggedTrigger())
+                            <i class='bx bxs-bell-ring bx-tada '></i>
+                        @else
+                            <i class='bx bxs-bell-ring'></i>
+                        @endif
+                        <span class="links_name ">Notificaciones</span>
+                        
                     </a>
                 </li>
-            @endif
+            {{-- @endif --}}
         @endcan
         @can('isAdmin')
             <li class="adminMenu">

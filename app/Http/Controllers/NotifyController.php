@@ -20,6 +20,7 @@ class NotifyController extends Controller
                                     
         $inscriptionNotValidated=Inscription::where('filenameIns','!=', null)
                                             ->where('isCompletedIns', 0)
+                                            ->orWhere('isCompletedIns', '=', null)
                                             ->get();
         return view("dashboard.showAdminNotifications", compact("isNotCompleted","inscriptionNotValidated"));
 
@@ -48,6 +49,7 @@ class NotifyController extends Controller
 
         $inscriptionNotValidated=Inscription::where('filenameIns','!=', null)
                                             ->where('isCompletedIns', 0)
+                                            ->orWhere('isCompletedIns', '==', null)
                                             ->count();
         if($inscriptionNotValidated>0){
             return true;

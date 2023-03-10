@@ -24,6 +24,10 @@ class InscriptionController extends Controller
         return redirect()->route('dashboard.logged.showNotify');
     }
 
+    public function unDoInscription(Request $request){
+        
+    }
+
     public function uploadPreinscription(Request $request)
     {
         $request->validate([
@@ -97,6 +101,5 @@ class InscriptionController extends Controller
         session()->flash('declinatePreinscription', 'Se ha RECHAZADO una preinscipcion.');
         return redirect()->route('dashboard.admin.showNotify');
     }
-
 
 }
