@@ -90,7 +90,7 @@
                                 </form>
                                 <hr />
                                 <p>Cancelar preinscripción </p>
-                                <form method="POST" action="{{ route('PDF.generatepreinscription') }}">
+                                <form method="POST" action="{{ route('dashboard.unDoInscription') }}">
                                     @csrf
                                     <input type="hidden" name="id" value="{{ $inscription->inscription_id }}">
                                     <button type="submit" id="downloadPDF" class="botonesControl"><i

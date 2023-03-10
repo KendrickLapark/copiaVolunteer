@@ -1148,7 +1148,28 @@ div.logo-details {
     padding: 2%;
 }
 
-#dashboard_downloadPDF{
+.footer_row_desc{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+
+
+}
+
+.footer_row_desc_left{
+    min-width: 40%;
+    margin-top: auto;
+    margin-left: auto;
+}
+
+.footer_row_desc_right{
+    min-width: 40%;
+    margin-top: auto;
+    margin-left: auto;
+}
+
+.button_dashboard{
     background-color: white;
     width: fit-content;
     padding-inline: 5%;
@@ -1156,6 +1177,10 @@ div.logo-details {
     border-radius: 25px;
     border: 1px grey solid;
 
+}
+
+#dash_but2{
+    white-space: nowrap;
 }
 
 @keyframes slidein {

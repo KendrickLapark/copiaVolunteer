@@ -32,16 +32,27 @@
             <form method="POST" action="{{ route('PDF.generatepreinscription') }}">
                 @csrf
                 <input type="hidden" name="id" value="{{ $inscription->inscription_id }}">
-                <button type="submit" id="dashboard_downloadPDF"><i
+                <button type="submit" class="button_dashboard"><i
                         class='bx bx-caret-down'></i> Descargar documento</button>
-            </form>
+            </form>         
         </div>
     </div>
-
-            <form method="POST" action="{{ route('dashboard.uploadPreinscription') }}" accept-charset="UTF-8" enctype="multipart/form-data">
-                @csrf
-                <input type="hidden" name="id" value="{{ $inscription->inscription_id }}">
-                <p><input type="file" name="file" accept="application/pdf" required></p>
-                <p><button type="submit" id="dashboard_downloadPDF" style="background-color: #ececec;">SUBIR PDF FIRMADO</button></p>
-            </form>
+        <div class="footer_row_desc">
+            <div class="footer_row_desc_left">
+                <form method="POST" action="{{ route('dashboard.uploadPreinscription') }}" accept-charset="UTF-8" enctype="multipart/form-data">
+                    @csrf
+                    <input type="hidden" name="id" value="{{ $inscription->inscription_id }}">
+                    <p><input type="file" name="file" accept="application/pdf" required></p>
+                    <p><button type="submit" class="button_dashboard" id="dash_but1" style="background-color: #ececec;">SUBIR PDF FIRMADO</button></p>
+                </form>
+            </div>
+            <div class="footer_row_desc_right">
+                <form method="POST" action="{{ route('dashboard.unDoInscription') }}">
+                    @csrf
+                    <input type="hidden" name="id" value="{{ $inscription->inscription_id }}">
+                    <button type="submit" class="button_dashboard" id="dash_but2">
+                        <i class='bx bx-x-circle'></i>Cancelar preinscripción</button>
+                </form>
+            </div>
+        </div>
 </div>

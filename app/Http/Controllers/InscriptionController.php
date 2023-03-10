@@ -24,8 +24,14 @@ class InscriptionController extends Controller
         return redirect()->route('dashboard.logged.showNotify');
     }
 
+    /* No funciona bien, borra todas las inscripciones para un mismo voluntario, tiene que borrar solo la inscripción marcada*/
+
     public function unDoInscription(Request $request){
-        
+
+        $inscription=Inscription::where('inscription_id', '==', $request->inscription_id)->delete();       
+
+        session()->flash('doPreinscription', 'Has cancelado la preinscripción en una actividad.');
+        return redirect()->route('dashboard.logged');
     }
 
     public function uploadPreinscription(Request $request)
