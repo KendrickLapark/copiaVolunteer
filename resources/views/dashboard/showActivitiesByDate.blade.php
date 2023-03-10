@@ -45,15 +45,6 @@
                         <div class="searchDayActivity" id="searchDayActivity"> </div>
                         <div class="searchDayActivity" id="searchDayActivity"> </div>
                         <div class="searchDayActivity" id="searchDayActivity"> </div>
-                        {{-- <div class="eachDayAct">
-                            <p class="eachDayActTitle" id='eachDayActTitle'> carrera </p>
-                            <select id="selectDayAct" name="cars" id="cars">
-                                <option >Actividades disponibles</option>
-                                <option >Saab</option>
-                                <option >Mercedes</option>
-                                <option >Audi</option>
-                            </select>
-                        </div> --}}
                     </div>
                     <div class="rightColumnDaysAct">
                         <div class="searchDayActivity" id="searchDayActivity"> </div>
@@ -100,10 +91,28 @@
                     $('.panel').eq(pos).hide();
                     $('.accordion').eq(pos).on("click", function(){
                         if($(this).next().is(':hidden'))
-                            $(this).next().show('slow');
+                            $(this).next().show('slow');                         
+
                         else{
                             $(this).next().hide('slow');
-                            }                        
+                            }   
+                                                 
+                    });
+
+                    $('.panel').eq(pos).each(function(){
+                        console.log($(this).find('.accordion2').length);
+                        $(this).find('.panel2').each(function(){
+                            $(this).hide();
+                        })
+                        $(this).find('.accordion2').each(function(){
+                            $(this).on("click", function(){
+                                if($(this).next().is(':hidden'))
+                                    $(this).next().show('slow');                         
+                                else{
+                                    $(this).next().hide('slow');
+                                    } 
+                            })
+                        })
                     });
 
                 }
