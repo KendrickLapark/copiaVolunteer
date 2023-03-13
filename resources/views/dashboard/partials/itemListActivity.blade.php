@@ -10,7 +10,7 @@
                         <div class="divTime" style="background-color:#8A8A8A";>
                     @endif                               
                             <div class="dateDiv"> {{ date('d-m-Y', strtotime($activity->dateAct)) }}</div>
-                            <div class="hourDiv"> {{ date('h:i', strtotime($activity->timeAct)) }}</div> 
+                            <div class="hourDiv"> {{ date('H:i', strtotime($activity->timeAct)) }}</div> 
                         </div>
                         
                         <div class="divMainDesc">

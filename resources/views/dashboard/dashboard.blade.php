@@ -72,8 +72,14 @@
                                 <form method="POST" action="{{ route('PDF.generatepreinscription') }}">
                                     @csrf
                                     <input type="hidden" name="id" value="{{ $inscription->inscription_id }}">
-                                    <button type="submit" id="dashboard_downloadPDF">
+                                    <button type="submit" class="button_dashboard">
                                     <i class='bx bx-caret-down'></i> Descargar documento</button>
+                                </form>
+                                <form method="POST" action="{{ route('dashboard.unDoInscription') }}">
+                                    @csrf
+                                    <input type="hidden" name="id" value="{{ $inscription->inscription_id }}">
+                                    <button type="submit" class="button_dashboard" id="dash_but2">
+                                        <i class='bx bx-x-circle'></i>Cancelar preinscripción</button>
                                 </form>
                             </div>
                         </div>
