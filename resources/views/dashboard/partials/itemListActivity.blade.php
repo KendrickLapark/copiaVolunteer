@@ -23,7 +23,6 @@
                             <div class="cupoDiv">
                                 <strong>Cupo: </strong>
                                 {{ App\Http\Controllers\ActivityController::quotaCalculator($activity->quotasAct, $activity->activity_id) }}
-                                /
                                 {{ $activity->quotasAct }}
                                 Libres
                             </div>

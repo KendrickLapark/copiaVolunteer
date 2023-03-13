@@ -11,7 +11,7 @@
             <div class="sectionTitle">
                     <i class='bx bx-envelope'></i>
                     {{-- <span class="badge"> </span> --}}
-                        Tiene notificaciones pendientes
+                        Tienes notificaciones
                     <i class='bx bx-caret-right' style="font-size: 20px"></i>
             </div>
         </div>
@@ -20,7 +20,7 @@
             <div class="sectionTitle">
                     <i class='bx bx-envelope'></i>
                     {{-- <span class="badge"> </span> --}}
-                        No tiene notificaciones pendientes
+                        No tienes notificaciones
                     <i class='bx bx-caret-right'></i>
             </div>
         </div>

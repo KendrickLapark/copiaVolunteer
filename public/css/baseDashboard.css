@@ -657,7 +657,6 @@ div.logo-details {
 /* showAdminNotifications */
 
 .mainTrayShowAdminNotifications{
-
     margin:auto;
     text-align: center;
 
@@ -763,7 +762,6 @@ div.logo-details {
     color: #ffffff;
     padding-block: 10px;
     padding-inline: 20px;
-    
     width: 300px;
     margin-block: 10px;
     margin-inline: 30px;
@@ -1335,12 +1333,15 @@ div.logo-details {
 /* changeAvatarForm */
 
 .mainDataCenter .container{
-
+    display:flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
     text-align: center;
-    object-fit: cover;
 
 }
+
+/* end changeAvatarForm */
 
 /* showMyEducations */
 
@@ -1711,6 +1712,16 @@ div.logo-details {
 
 /* End avatar change form */
 
+/* formCreateInfoExtra */
+
+.mainTrayCreateInfoExtra .mainData.center{
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* end formCreateInfoExtra */
+
 /* ShowActivitiesOptions */
 
 .mainTrayActivitiesOptions{
@@ -2040,7 +2051,6 @@ div.logo-details {
 @media only screen and (max-width: 1000px) {
 
 
-
 }
 
 /* End showActivitiesByCategory */
@@ -2112,54 +2122,6 @@ select.small {
     opacity: 1 !important;
 }
 
-/*css para el modal generado tras clickar en el fullcalendar de la vista showAllActivitiesLogged.blade pepe */
-
-#fullcalendarModal .modal-dialog{ 
-    position: flex;
-    min-width: 50%;
-}
-
-.modal-content{
-    min-height: 60%;
-}
-
-.modal-title{
-    font-size: 24px;
-    color: #074f9b;
-    margin: 0 auto;
-    justify-content: center;
-}
-
-.modal-header{
-    justify-content: center;
-}
-
-.modal-activity{
-    text-align: left;
-    font-weight: bold;
-}
-
-.modal-activity-title{
-    display:list-item;
-    list-style-type: disc;
-    margin-left: 5%;
-}
-
-.modal-activity-description{  
-    display:list-item;
-    list-style-type:circle;
-    margin-left: 8%;
-}
-
-.modal-activity-horary{
-    display:list-item;
-    list-style-type: square;
-    margin-left: 11%;
-    color:#5F85D0;
-}
-
-
-
 .eachActivityType {
     background-color: #064b98;
     border: 1px solid #ffffff;
@@ -2188,8 +2150,6 @@ select.small {
 .geniallyIcon{
     transform: scale(0.25);
 }
-
-
 
 @media only screen and (max-width: 1000px) {
     .eachActivityType {

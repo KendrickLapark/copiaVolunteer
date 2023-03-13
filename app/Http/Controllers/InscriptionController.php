@@ -27,7 +27,7 @@ class InscriptionController extends Controller
     public function unDoInscription(Request $request){
 
         $inscription=Inscription::where('inscription_id', $request->id)->first(); 
-        $inscription->delete();      
+        $inscription->delete();   
 
         session()->flash('unDoPreinscription', 'Has cancelado la preinscripción en una actividad.');
         return redirect()->route('dashboard.logged');

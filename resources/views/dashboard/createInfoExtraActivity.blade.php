@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-    <div class="mainTray ">
+    <div class="mainTrayCreateInfoExtra ">
         <div class="sectionTitle">
             Crear Información Extra
         </div>

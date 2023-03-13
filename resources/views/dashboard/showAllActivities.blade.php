@@ -22,7 +22,6 @@
             </div>
         @endif
 
-
         @if (session()->has('sucessActivityDeleted'))
             <div class="formSubmitSuccess center">
                 {{ session('sucessActivityDeleted') }}

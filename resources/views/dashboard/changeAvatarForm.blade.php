@@ -22,7 +22,7 @@
                 <p>NO Tienes Avatar Actualmente</p>
             @else
                 <img src="data:image/jpeg;base64,{{ base64_encode(Storage::get('avatar/' . Auth::user()->imageVol)) }}" alt="{{ Auth::user()->nameVol }}"
-                    class="avatarInForm" />
+                    class="avatarInForm"/>
             @endif
             <p>Cambiar:</p>
             <form method="POST" action="{{ route('dashboard.uploadAvatar') }}" accept-charset="UTF-8"
