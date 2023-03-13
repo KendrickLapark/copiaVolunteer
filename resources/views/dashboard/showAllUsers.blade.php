@@ -51,10 +51,7 @@
                     success:function(data){
                         $('#search_list').html(data.html);
 
-                        $(".hidden").hide();
-
-                        /* sicronizar con el archivo javascript de rotación de iconos del rowUser en itemListUsers, falta que al pursar el icono 
-                        lessDetails no se desincronice el icono del rowUser */                      
+                        $(".hidden").hide();                
 
                             $(".bx.bxs-down-arrow").on("click", function(){
                                

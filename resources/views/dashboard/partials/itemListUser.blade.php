@@ -40,21 +40,23 @@
                     <div class="eachRow">
                         <div class="mailVol">
                             <i class='bx bx-envelope' style="font-size: 20px"></i>
-                            <a href="mailto:{{ $volunteer->persMailVol }}" style="color:white">{{ $volunteer->persMailVol }}</a>
-                            @if ($volunteer->corpMailVol)
+                            @if ($volunteer->persMailVol)                          
+                                <a href="mailto:{{ $volunteer->persMailVol }}" style="color: white">{{ $volunteer->persMailVol }}</a>
                                 (C)
-                                <a href="mailto:{{ $volunteer->corpMailVol }}">{{ $volunteer->corpMailVol }}</a>
+                            @else
+                                E-mail no disponible.
                             @endif
                         </div>
                     </div>
 
                     <div class="eachRow">
-                        <div class="mailVol">
+                        <div class="corpMailVol">
                             <i class='bx bx-envelope' style="font-size: 20px"></i>
-                            <a href="mailto:{{ $volunteer->persMailVol }}" style="color:white">{{ $volunteer->persMailVol }}</a>
-                            @if ($volunteer->corpMailVol)
+                            @if ($volunteer->corpMailVol)                         
+                                <a href="mailto:{{ $volunteer->corpMailVol }}" style="color:white">{{ $volunteer->corpMailVol }}</a>
                                 (C)
-                                <a href="mailto:{{ $volunteer->corpMailVol }}">{{ $volunteer->corpMailVol }}</a>
+                            @else
+                                E-mail corporativo no disponible.
                             @endif
                         </div>
                     </div>
@@ -132,18 +134,20 @@
                             @if (count($volunteer->education) == 0)
                                 No tiene titulación registrada
                             @else
-                                @foreach ($volunteer->education as $education)
-                                <button class="accordionUsers">{{ $education->titleEdu }} <i class='bx bxs-down-arrow' id='arrowDownload'></i> </button> 
-                                <div class="downloadPanel">                                   
-                                    <form method="POST" action="{{ route('dashboard.downloadThatEducation') }}"
-                                        accept-charset="UTF-8" enctype="multipart/form-data">
-                                        @csrf
-                                        <input type="hidden" name="id" value="{{ $education->education_id }}">
-                                        <p><button type="submit" id="downloadEdu" class="downloadButton"><i
-                                                    class='bx bx-save'></i></button></p>
-                                    </form>
+                                <div class="accordionPanel">
+                                    @foreach ($volunteer->education as $education)
+                                    <button class="accordionUsers">{{ $education->titleEdu }} <i class='bx bxs-down-arrow' id='arrowDownload'></i> </button> 
+                                    <div class="downloadPanel">                                   
+                                        <form method="POST" action="{{ route('dashboard.downloadThatEducation') }}"
+                                            accept-charset="UTF-8" enctype="multipart/form-data">
+                                            @csrf
+                                            <input type="hidden" name="id" value="{{ $education->education_id }}">
+                                            <p><button type="submit" id="downloadEdu" class="downloadButton"><i
+                                                        class='bx bx-save'></i></button></p>
+                                        </form>
+                                    </div>
+                                    @endforeach
                                 </div>
-                                @endforeach
                             @endif
                         </div>
                         <div>

@@ -41,7 +41,7 @@
             <li>
                 <a href="{{ route('dashboard.showMyProfile') }}">
                     <i class='bx bxs-user-account'></i>
-                    <span class="links_name">Editar mi perfil</span>
+                    <span class="links_name">Mi perfil</span>
                 </a>
             </li>
             {{-- @if (App\Http\Controllers\NotifyController::notifyLoggedTrigger()) --}}
@@ -52,8 +52,7 @@
                         @else
                             <i class='bx bxs-bell-ring'></i>
                         @endif
-                        <span class="links_name ">Notificaciones</span>
-                        
+                        <span class="links_name ">Notificaciones</span>                       
                     </a>
                 </li>
             {{-- @endif --}}

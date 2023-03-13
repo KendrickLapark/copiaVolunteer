@@ -4,11 +4,8 @@
     MOSTRANDO ACTIVIDAD
 @endsection
 
-@section('headlibraries')
-@endsection
-
 @section('content')
-    <div class="mainTray">
+    <div class="mainTrayShowThatActivity">
 
         <div class="sectionTitle">
             MOSTRANDO ACTIVIDAD
@@ -20,28 +17,31 @@
         @endif
 
 
-        <div class="mainData">
-            <div class="row">
-                <div>
-                    <strong>Nombre: </strong>{{ $activity->nameAct }}
-                </div>
-                <div>
-                    <strong>Cupo: </strong>
-                    {{ App\Http\Controllers\ActivityController::quotaCalculator($activity->quotasAct, $activity->activity_id) }}
-                    /
-                    {{ $activity->quotasAct }}
-                    Libres
-                </div>
-                <div><strong>Hora de inicio: </strong>{{ $activity->timeAct }}</div>
-                <div><strong>Hora Fin: </strong>{{ $activity->endTimeAct }}</div>
+        <div class="mainDataActivity">
+            <div class="rowDataActivity">
+                <div class="inner_row_Dat_Act">
+                    <div>
+                        <strong>Nombre: </strong>{{ $activity->nameAct }}
+                    </div>
+                    <div>
+                        <strong>Cupo: </strong>
+                        {{ App\Http\Controllers\ActivityController::quotaCalculator($activity->quotasAct, $activity->activity_id) }}
+                        
+                        {{ $activity->quotasAct }}
+                        Libres
+                    </div>
+                    <div><strong>Hora de inicio: </strong>{{ $activity->timeAct }}</div>
+                    <div><strong>Hora Fin: </strong>{{ $activity->endTimeAct }}</div>
 
-                <div><strong>Fecha: </strong>{{ date('d-m-Y', strtotime($activity->dateAct)) }}</div>
+                    <div><strong>Fecha: </strong>{{ date('d-m-Y', strtotime($activity->dateAct)) }}</div>
 
-                <div class="controlButton moreDetails">
-                    <i class='bx bxs-down-arrow'></i>
+                    <div class="controlButton moreDetails">
+                        <i class='bx bxs-down-arrow'></i>
+                    </div>
                 </div>
             </div>
-            <div class="hidden">
+            <div class="hiddenDataActivity">
+                <div class="inner_hidden_Dat_Act">
                 <div class="eachRow">
                     <div>
                         <strong>Descripcion: </strong>
@@ -104,5 +104,26 @@
                 </div>
             </div>
         </div>
+        </div>
     </div>
+@endsection
+
+@section('headlibraries')
+
+<script> 
+
+    $(document).ready(function(){
+        $(".hidden").hide();
+    
+        $(".rowDataActivity").on("click", function() {
+            if($(this).next().is(':hidden'))
+                $(this).next().show('slow');
+            else{
+                $(this).next().hide('slow');
+            }
+        });
+    }); 
+
+</script>
+
 @endsection

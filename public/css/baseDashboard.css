@@ -1927,6 +1927,58 @@ div.logo-details {
 
 /* End showActivitiesByDate */
 
+/* showThatActivity */
+
+.mainTrayShowThatActivity{
+    display: flex;
+    flex-direction: column;
+    row-gap: 3em;
+
+}
+
+.rowDataActivity{
+    width: 40%;
+    background-color: #ececec;
+    line-height: 1.5em;
+    margin:auto;
+    margin-block: 10px;
+    border-radius: 25px;
+    padding: 1%;
+
+}
+
+.inner_row_Dat_Act{
+    background-color: white;
+    line-height: 1.5em;
+    border-radius: 25px;
+    padding: 2%;
+}
+
+.inner_hidden_Dat_Act{
+    background-color: white;
+    line-height: 1.5em;
+    border-radius: 25px;
+    padding: 2%;
+}
+
+.hiddenDataActivity{
+    width: 40%;
+    background-color: #ececec;  
+    margin: auto; 
+    line-height: 1.5em;
+    border-radius: 25px;
+    padding: 1%;
+
+}
+
+.mainTrayShowThatActivity .mainDataActivity .row .controlButton.moreDetails{
+    font-size: 20px;
+    text-align: right;
+
+}
+
+/* end showThatActivity */
+
 /* showActivitiesByCategory */
 
 .mainDataCatAct{
