@@ -157,7 +157,7 @@
                                         <span class="codPosVol"> {{ $volunteer->codPosVol }} </span>
                                     </p>
                                 </li>
-              
+                            
                     </div>
                     
                 </div>

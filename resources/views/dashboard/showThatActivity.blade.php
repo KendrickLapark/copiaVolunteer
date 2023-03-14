@@ -92,8 +92,8 @@
                                     <form method="POST" action="{{ route('dashboard.makeInscription') }}">
                                         @csrf
                                         <input type="hidden" name="id" value="{{ $activity->activity_id }}">
-                                        <button type="submit" id="submit"
-                                            class="botonesControl">QUIERO<br />PREINSCRIBIRME</button>
+                                        <button type="submit" id="dash_but3"
+                                            class="button_dashboard">Preinscribirme</button>
                                     </form>
                                 @endif
                             @else

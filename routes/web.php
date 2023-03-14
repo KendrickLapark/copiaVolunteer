@@ -206,6 +206,12 @@ Route::middleware(['isAdmin'])->group(function () {
     // Búsqueda de usuarios en bd.
     Route::get("searchUser",[UsersController::class,'searchUser']);
 
+    // Muestra datos del usuario.
+    Route::get("myUser", [UsersController::class, 'myUser']);
+
+    //Muestra las actividades terminadas del usuario.
+    Route::get('myDoneInscriptions', [UsersController::class, 'myDoneInscriptions']);
+
     Route::get('/dashboard-admin',[AuthController::class, 'adminDashboard'])
             ->name('dashboard.admin');
     /* Mostramos dashboard de notificaciones Admin */

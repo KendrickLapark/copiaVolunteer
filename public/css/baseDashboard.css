@@ -1174,11 +1174,15 @@ div.logo-details {
     color:#000000;
     border-radius: 25px;
     border: 1px grey solid;
-
 }
 
 #dash_but2{
     white-space: nowrap;
+}
+
+#dash_but3{
+    white-space: nowrap;
+    width: 40%;
 }
 
 @keyframes slidein {
@@ -1365,79 +1369,132 @@ div.logo-details {
 /* showMyProfile */
 
 .avatarMyProfile{
+    display: flex;
+    margin: auto;
     max-width: 100%;
     max-height: 100%;
-    width: 500px;
-    height: 500px;
-    border-radius: 50%;
-    transform: scale(0.5);
-    object-fit: cover;
+    width: 300px;
+    height: 300px;
+    /* object-fit: cover; */
+}
+
+.containerMyProfile{
+    margin:2%;
+
 }
 
 .mainDataCenterRow{
     width: 100%;
     display: flex;
-    justify-content: center;
-    vertical-align: middle;
-    align-items: center;
-    border: 1px grey solid;
-    border-radius: 25px;
-    overflow: auto;
+    flex-direction: column;
 
 }
 
-.leftCol{
+.rowTop{
     display: flex;
-    float:flex;
-    min-width: 33%; 
+    flex-direction: row;
+    background-color: red;
 }
 
-.leftColForm{
-    float:flex;
-    min-width: 33%; 
-    padding: 20px;
-}
-
-.auxItem{
+.topLeftCol{
+    background-color: violet;
     width: 30%;
+
 }
 
-.columnItem{
+.topRightCol{
     width: 70%;
-    float: flex;
 }
 
-.colTitle{
-    font-size: 30px;
+.rowBottom{
+    display: flex;
+    flex-direction: row;
+    background-color: green;
+    width: 100%;
+    height: 100%;
 }
 
-.dataVol-item{
-    margin:10px;
+.bottomLeftCol{
+    background-color:tomato;
+    width: 30%;
+    padding-inline: 2%;
+    padding-block: 1%;
+    line-height: 1.5rem;
+
 }
 
-.centerCol{
-    float:flex;
-    justify-content: center;
-    vertical-align: middle;
-    align-items: center;
-    min-width: 33%;
+.bottomRightCol{
+    background-color: burlywood;
+    width: 70%;
+    min-height: 100%;
+    padding-top: 0.8%;
+    padding-inline: 0.5%;
+
 }
 
-.rightCol{
+.bottomRightCol a{
+    font-size: 18px; 
+    padding-inline: 0.3%;
+    border-bottom: 1.5px solid grey;
+    padding-bottom: 10px; 
+}
+
+.containerImgMyProfile{
+    padding: 5%;
+
+}
+
+.containerDataMyProfile{
+    background-color: whitesmoke;
+    font-size: 18px;
+    line-height: 1.5rem;
+    padding: 1%;
+    margin-top: 2%;
+    min-height: 60%;
+    width: 100%;
+    margin-bottom: 2%;
+
+}
+
+.rowInfoUser{
+    padding: 10px;
     
-    float:flex;
-    min-width: 33%; 
+
 }
 
-.rightColForm{
-    padding: 20px;
-    float:flex;
-    min-width: 33%; 
+.topRightCol{
+    background-color: #009fe3;
+    height: 50%;
+
 }
 
+.bottomRightCol li{
+    display: inline;
+}
 
-#labeltitleCol{
+.nameVolMyProfile{
     font-size: 24px;
+    font-weight: bold;
+    padding: 2%;
+
+}
+
+.orgVolMyProfile{
+    font-size: 20px;
+    padding-inline: 2%;
+
+}
+
+.numDocVolMyProfile{
+    font-size: 20px;
+    padding: 2%;
+
+}
+
+.birthDateVolMyProfile{
+    font-size: 20px;
+    padding: 2%;
+
 }
 
 .divButtonMyProfile{

@@ -104,7 +104,7 @@ class UsersController extends Controller
             ->first();
 
         $allDelegations = Delegation::all();
-        return view('dashboard.showMyProfile', compact("volunteer", "allDelegations"));
+        return view('dashboard.showMyProfile2', compact("volunteer", "allDelegations"));
 
     }
 
@@ -258,5 +258,28 @@ class UsersController extends Controller
         }
 
     }      
+
+    public function myUser(Request $request){
+
+        if($request->ajax()) {
+
+            $volunteer = Volunteer::find(Auth::user()->id);
+        
+            $html = view('dashboard.partials.itemListUserInfo', [
+                'volunteer' => $volunteer,
+            ])->render();             
+        
+            return response()->json([
+                'success' => true,
+                'html' => $html,
+            ], 200);
+        }else{
+            return response()->json([
+                'success' => false,
+                'message' => "Something went wrong!",
+            ], 403);
+        }
+
+    }
 
 }

@@ -28,6 +28,31 @@ class AuthController extends Controller
         return view('dashboard.dashboard', compact("inscriptions"));
     }
 
+    /* Método que recupera el historial de inscripciones de actividades realizadas del usuario */
+
+    public function myDoneInscriptions (Request $request){
+
+        if($request->ajax()) {
+
+            $inscriptions = Inscription::where('isDoneIns', true)->get();
+        
+            $html = view('dashboard.partials.itemListInscriptionDone', [
+                'inscriptions' => $inscriptions,
+            ])->render();             
+        
+            return response()->json([
+                'success' => true,
+                'html' => $html,
+            ], 200);
+        }else{
+            return response()->json([
+                'success' => false,
+                'message' => "Something went wrong!",
+            ], 403);
+        }
+
+    }
+
     public function adminDashboard()
     {
         return view('dashboard.dashboardAdmin');
@@ -128,7 +153,6 @@ class AuthController extends Controller
     public function store(array $data)
     {
         
-
         $pass = ($this->genPass());
 
         echo "La pass es $pass";
@@ -225,7 +249,6 @@ class AuthController extends Controller
         return implode($pass);
     }
 
-
     function checkDNI($dni)
     {
         $letra = substr($dni, -1);
@@ -264,6 +287,8 @@ class AuthController extends Controller
         }
         return false;
     }
+
+    
 
     public static function getAuth()
     {
