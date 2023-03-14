@@ -210,7 +210,7 @@ Route::middleware(['isAdmin'])->group(function () {
     Route::get("myUser", [UsersController::class, 'myUser']);
 
     //Muestra las actividades terminadas del usuario.
-    Route::get('myDoneInscriptions', [UsersController::class, 'myDoneInscriptions']);
+    Route::get('myDoneInscriptions', [AuthController::class, 'myDoneInscriptions']);
 
     Route::get('/dashboard-admin',[AuthController::class, 'adminDashboard'])
             ->name('dashboard.admin');

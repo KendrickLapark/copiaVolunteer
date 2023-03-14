@@ -131,11 +131,6 @@
 
             /* ajaxCall(); */
 
-            $('.bx.bxs-user').on("click", function(){
-                ajaxCall();
-
-            });
-
             function ajaxCall2(){
 
                 return $.ajax({
@@ -151,8 +146,13 @@
 
             }
 
-            $('bx.bx-list-ol').on("click", function(){
+            $('.bx.bxs-user').on("click", function(){
                 ajaxCall2();
+
+            });
+
+            $('bx.bx-list-ol').on("click", function(){
+                ajaxCall();
 
             });
        

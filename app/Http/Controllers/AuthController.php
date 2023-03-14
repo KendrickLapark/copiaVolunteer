@@ -30,11 +30,12 @@ class AuthController extends Controller
 
     /* Método que recupera el historial de inscripciones de actividades realizadas del usuario */
 
-    public function myDoneInscriptions (Request $request){
+    public function myDoneInscriptions(Request $request){
 
         if($request->ajax()) {
 
-            $inscriptions = Inscription::where('isDoneIns', true)->get();
+            $inscriptions = Inscription::where('volunteer_id', Auth::user()->id)
+            ->get();
         
             $html = view('dashboard.partials.itemListInscriptionDone', [
                 'inscriptions' => $inscriptions,
