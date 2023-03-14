@@ -1393,11 +1393,11 @@ div.logo-details {
 .rowTop{
     display: flex;
     flex-direction: row;
-    background-color: red;
+    background-color: #cecece;
 }
 
 .topLeftCol{
-    background-color: violet;
+    background-color: #f7d4d7;
     width: 30%;
 
 }
@@ -1463,7 +1463,7 @@ div.logo-details {
 }
 
 .topRightCol{
-    background-color: #009fe3;
+    background-color: #f7d4d7;
     height: 50%;
 
 }

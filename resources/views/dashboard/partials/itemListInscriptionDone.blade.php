@@ -1,7 +1,7 @@
 @foreach($inscriptions as $inscription)
 
     <div class="inscDoneId">
-        hola
+        Inscription id:
         {{$inscription->inscription_id}}
     </div>
 

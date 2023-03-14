@@ -104,7 +104,7 @@ class UsersController extends Controller
             ->first();
 
         $allDelegations = Delegation::all();
-        return view('dashboard.showMyProfile2', compact("volunteer", "allDelegations"));
+        return view('dashboard.showMyProfile', compact("volunteer", "allDelegations"));
 
     }
 

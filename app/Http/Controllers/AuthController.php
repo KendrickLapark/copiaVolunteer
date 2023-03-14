@@ -34,7 +34,7 @@ class AuthController extends Controller
 
         if($request->ajax()) {
 
-            $inscriptions = Inscription::where('volunteer_id', Auth::user()->id)
+            $inscriptions = Inscription::where('isDoneIns', true)
             ->get();
         
             $html = view('dashboard.partials.itemListInscriptionDone', [
