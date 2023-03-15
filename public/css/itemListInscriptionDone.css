@@ -1,0 +1,23 @@
+.rowDoneInscription{
+    background-color: #ececec;
+    padding:2%;
+    border-radius: 25px;
+
+}
+
+.inner_rowDoneInscription{
+    padding: 2%;
+    border-radius: 25px;
+    background-color: white;
+    line-height: 180%;
+
+}
+
+.titleContainer{
+    padding-block: 1%;
+    padding-inline: 2%;
+
+}
+
+
+

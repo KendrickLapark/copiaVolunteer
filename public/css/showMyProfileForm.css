@@ -1,0 +1,31 @@
+.leftColContainer{
+    display: flex;
+    flex-direction: row;
+}
+
+.firstCol{
+    margin: auto;
+    min-width:50%;
+    justify-content: center;
+    padding: auto;
+}
+
+.secondCol{
+    margin:auto;
+    min-width: 50%;
+    padding: auto;
+}
+
+.rightColForm{
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+}
+
+.eachCreateInfoExtraElement{
+    width: 70%;
+    text-align: center;
+}
+
+
+

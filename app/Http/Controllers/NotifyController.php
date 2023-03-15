@@ -32,7 +32,7 @@ class NotifyController extends Controller
         $inscription = Inscription::where('volunteer_id', Auth::user()->id)->get() ;
        
         return view("dashboard.showLoggedNotifications", compact("inscription","activityTypes"));
-
+ 
     }
 
     public static function notifyTrigger()

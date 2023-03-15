@@ -22,8 +22,10 @@ class AuthController extends Controller
 
     public function loggedDashboard()
     {
-        $inscriptions = Inscription::where('volunteer_id', Auth::user()->id)
-            ->get();
+        /* $inscriptions = Inscription::where('volunteer_id', Auth::user()->id)
+            ->get(); */
+
+        $inscriptions = Inscription::where('isDoneIns', false)->get();
 
         return view('dashboard.dashboard', compact("inscriptions"));
     }
@@ -34,11 +36,22 @@ class AuthController extends Controller
 
         if($request->ajax()) {
 
-            $inscriptions = Inscription::where('isDoneIns', true)
+            $inscriptions = Inscription::where('volunteer_id', Auth::user()->id)
             ->get();
+
+            foreach($inscriptions as $inscription){            
+                if($inscription->isCompletedIns){
+                    if($inscription->activity->dateAct < date('Y-m-d')){
+                        $inscription->isDoneIns = true;
+                        $inscription->save();
+                    }                   
+                }      
+            }
+
+            $doneInscriptions = Inscription::where('isDoneIns', true)->get();
         
             $html = view('dashboard.partials.itemListInscriptionDone', [
-                'inscriptions' => $inscriptions,
+                'doneInscriptions' => $doneInscriptions,
             ])->render();             
         
             return response()->json([

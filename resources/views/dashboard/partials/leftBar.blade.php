@@ -17,7 +17,7 @@
             <li>
                 <a href="{{ route('dashboard.logged') }}">
                     <i class='bx bxs-dashboard'></i>
-                    <span class="links_name">Dashboard</span>
+                    <span class="links_name">Inscripciones</span>
                 </a>
             </li>
             <li>

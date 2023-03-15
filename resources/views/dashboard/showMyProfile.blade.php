@@ -7,7 +7,7 @@
 @section('content')
     <div class="mainTray">
         <div class="sectionTitle">
-            Mi perfil 2
+            Mi perfil
         </div>
         @if (session()->has('successUpdateUser'))
             <div class="formSubmitSuccess center">
@@ -55,7 +55,6 @@
                     <div class="rowBottom">
                         
                         <div class="bottomLeftCol">
-
                             <div class="persMailVolMyProfile">
                                 {{$volunteer->persMailVol}}
                             </div>
@@ -71,15 +70,15 @@
                             <div class="locationVolMyProfile">
                                 {{$volunteer->stateVol}} {{$volunteer->townVol}} {{$volunteer->codPosVol}}
                             </div>
-
                         </div>
 
                         <div class="bottomRightCol">
                             <ul>
-                                <li> <i class="bx bx-list-ol"></i> <a id="a1" href="">Historial</a></li>
-                                <li> <i class="bx bxs-user"></i> <a id="a2" href="">Información</a></li>
+                                <li> <i class="bx bx-list-ol"></i> <a id="a1">Historial</a></li>
+                                <li> <i class="bx bxs-user"></i> <a id="a2">Información</a></li>
                             </ul>
 
+                            
                             <div class="containerDataMyProfile" id="id2">
                                 
                             </div>                           
@@ -94,7 +93,7 @@
             <div class="divButtonMyProfile">
                 <form method="GET" action="{{ route('dashboard.showMyProfileForm') }}" accept-charset="UTF-8"
                     enctype="multipart/form-data">
-                    <p><button type="submit" class="botonesControl">Editar</button></p>
+                    <p><button type="submit" class="button_dashboard">Editar</button></p>
                 </form>
             </div>
 
@@ -109,6 +108,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
     </script>
+    <link rel="stylesheet" href="<?php echo asset('css/itemListInscriptionDone.css'); ?>" type="text/css">
 
     <script>
 
@@ -121,6 +121,7 @@
                     url:"myUser",
                     type:"GET",
                     success:function(data){
+                        $('.titleContainer').text('Datos del usuario');
                         $('#id2').html(data.html);   
 
                     }
@@ -138,6 +139,7 @@
                     url:"myDoneInscriptions",
                     type:"GET",
                     success:function(data){
+                        $(".titleContainer").text("Historial de actividades realizadas");
                         $('#id2').html(data.html);   
 
                     }
@@ -146,14 +148,14 @@
 
             }
 
-            $('.bx.bxs-user').on("click", function(){
-                ajaxCallInfoUser();
-
+            $('#a1').on("click", function(){
+                ajaxCallInfoIns();
+                
             });
 
-            $('.bx.bx-list-ol').on("click", function(){
-                ajaxCallInfoIns();
-
+            $('#a2').on("click", function(){
+                ajaxCallInfoUser();
+                
             });
        
         });
