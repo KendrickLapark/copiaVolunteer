@@ -35,17 +35,14 @@
                                 {{$volunteer->nameVol}} {{$volunteer->surnameVol}} {{$volunteer->surname2Vol}}
                             </div>
 
-                            <div class="orgVolMyProfile">
-                                {{$volunteer->organiVol}}
-                            </div>
-
                             <div class="numDocVolMyProfile">
                                 {{$volunteer->numDocVol}}
                             </div>
 
-                            <div class="birthDateVolMyProfile">
-                                {{$volunteer->birthDateVol}}
+                            <div class="orgVolMyProfile">
+                                {{$volunteer->organiVol}}
                             </div>
+                            
                         </div>
                                      
                     </div>

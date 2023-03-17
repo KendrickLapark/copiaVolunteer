@@ -169,8 +169,6 @@ class AuthController extends Controller
         
         $pass = ($this->genPass());
 
-        echo "La pass es $pass";
-
         EmailController::sendRegisterMail($data['persMailVol'], $pass);
         $pass = Hash::make($pass);
 

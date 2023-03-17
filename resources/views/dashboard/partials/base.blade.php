@@ -52,6 +52,7 @@
                 <?php session()->forget('status'); ?>
             }
         }
+        
     </script>
 
 </body>
