@@ -35,11 +35,18 @@
                     </p>
                 </div>
                 <div class="eachCreateActivityElement">
-                    <p>
+                    {{-- <p>
                         <label id="entityActLabel" class="formSections" for="entityAct">Entidad de la actividad:</label>
                         <br />
                         <input type="text" id="entityAct" name="entityAct" required>
-                    </p>
+                    </p> --}}
+
+                    <p>Si quieres seleccionar más de uno usa las teclas Mayúscula o control</p>
+                    <select name="Entities[]" id="Entities" multiple="multiple" class="multipleSelect big">
+                        @foreach ($entities as $entity)
+                            <option value="{{ $entity->entity_id }}">{{ $entity->nameEntity }}</option>
+                        @endforeach
+                    </select>
                 </div>
                 <div class="eachCreateActivityElement">
                     <p>

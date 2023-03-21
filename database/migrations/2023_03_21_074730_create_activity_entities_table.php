@@ -13,14 +13,15 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('activity_type_activities', function (Blueprint $table) {
-            $table->increments('act_typeAct_id');
+        Schema::create('activity_entities', function (Blueprint $table) {
+            $table->increments('act_entity_id');
             $table->integer('activity_id')->unsigned();
-            $table->integer('typeActivity_id')->unsigned();
+            $table->integer('entity_id')->unsigned();
             $table->foreign('activity_id')->references('activity_id')->on('activities')
                 ->onDelete('cascade');
-            $table->foreign('typeActivity_id')->references('typeAct_id')->on('type_activities')
-                 ->onDelete('cascade');         
+            $table->foreign('entity_id')->references('entity_id')->on('entities')
+                 ->onDelete('cascade');
+            $table->timestamps();
         });
     }
 
@@ -31,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('activity_type_activities');
+        Schema::dropIfExists('activity_entities');
     }
 };

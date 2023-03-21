@@ -6,6 +6,7 @@ use App\Models\Delegation;
 use App\Models\TypeActivity;
 use App\Models\Activity;
 use App\Models\Inscription;
+use App\Models\Entity;
 use Illuminate\Support\Facades\Auth;
 
 use Illuminate\Http\Request;
@@ -24,21 +25,20 @@ class ActivityController extends Controller
     public function formCreateActivity()
     {
         $activityTypes = TypeActivity::all();
-        return view("dashboard.createActivity", compact("activityTypes"));
+        $entities = Entity::all();
+        return view("dashboard.createActivity", compact("activityTypes", 'entities'));
     }
 
     public function showActivitiesGenially()
     {
 
         return view("dashboard.showActivitiesGenially");
-
     }
 
     public function showWeekCalendarGenially()
     {
 
         return view("dashboard.showWeekCalendarGenially");
-
     }
 
     public function saveActivity(Request $request)
@@ -46,7 +46,6 @@ class ActivityController extends Controller
         $request->validate([
             'nameAct' => 'required',
             'descAct' => 'required',
-            'entityAct' => 'required',
             'timeAct' => 'required',
             'dateAct' => 'required',
             'quotasAct' => 'required',
@@ -56,7 +55,6 @@ class ActivityController extends Controller
         
         $activity->nameAct = $request->nameAct;
         $activity->descAct = $request->descAct;
-        $activity->entityAct = $request->entityAct;
         $activity->timeAct = $request->timeAct;
         $activity->dateAct = $request->dateAct;
         if ($request->isPreseAct=="on"){
@@ -77,8 +75,9 @@ class ActivityController extends Controller
 
         $activity->save();
         $activity->typeAct()->attach($request->ActTypes);
+        $activity->entity()->attach($request->Entities);
 
-
+        
         session()->flash('sucessActivityCreated', 'Se ha CREADO una ACTIVIDAD.');
         return redirect()->route('dashboard.showAllActivities');
     }
@@ -94,8 +93,6 @@ class ActivityController extends Controller
         session()->flash('sucessActivityDeleted', 'Se ha BORRADO una ACTIVIDAD.');
        return redirect()->route('dashboard.showAllActivities');
     }
-
-    /**/
 
     public function doVisible(Request $request)
     {
@@ -205,9 +202,8 @@ class ActivityController extends Controller
     public function showActivitiesByCategory(){
 
         $delegations = Delegation::all();
-        $activityTypes = TypeActivity::all();
+        $activityTypes = TypeActivity::all();    
         return view('dashboard.showActivitiesByCategory', compact("activityTypes", "delegations"));
-
     }
 
     public function showActivitiesByDate(){
@@ -236,13 +232,13 @@ class ActivityController extends Controller
             return false;
     }
 
-    public function showThatActivity ($activity_id)
+    public function showThatActivity($activity_id)
     {
         $activity = Activity::where('activity_id',$activity_id)
                             ->first();
         $activityTypes = TypeActivity::all();
         return view('dashboard.showThatActivity', compact("activity","activityTypes"));
-    }
+    } 
 
     public function searchActivity(Request $request){
 
@@ -292,8 +288,7 @@ class ActivityController extends Controller
 
     public function nullActivity(Request $request)
     {
-
-        
+     
         $activity = Activity::where('activity_id',$request->id);
         $nullAct = $activity->value('isNulledAct');
 
@@ -312,7 +307,7 @@ class ActivityController extends Controller
                 $activity->nameAct,
                 $volunteer->persMailVol
             ); 
-        } */  
+        } */    
 
         session()->flash('nullActivity', $msg);
 
@@ -323,7 +318,7 @@ class ActivityController extends Controller
 
         if($request->ajax()) {
             $query = $request->get('searchDayActivity');
-            if(empty($query)) {
+            if(empty($query)) {               
                 $activities=Activity::where('dateAct','like','%'.$request->searchDayActivity.'%')->orderBy('dateAct', 'asc')->get();
                 $activityTypes = TypeActivity::all();
             } else {

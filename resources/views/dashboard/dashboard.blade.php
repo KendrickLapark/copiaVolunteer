@@ -34,7 +34,7 @@
             @foreach ($inscriptions as $inscription)                      
                 <div class="mainActivityDashboard">
                     @if($inscription->filenameIns == null)
-                        @include('dashboard.partials.itemListInscription')   
+                        @include('dashboard.partials.itemListInscription')
                     @elseif($inscription->filenameIns != null)
                         <div class="msg_Inscription">
                             Inscripcion realizada para actividad : {{$inscription->activity->nameAct}}

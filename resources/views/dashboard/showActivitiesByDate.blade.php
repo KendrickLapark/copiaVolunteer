@@ -38,21 +38,19 @@
         </div>
 
         <div class="hiddenDaysActivities">
-            <div class="titleDaysAct" id="titleDaysAct">
-            </div>
+            <div class="titleDaysAct" id="titleDaysAct"></div>
             <div class="mainHiddenDaysActivities">
-                    <div class="leftColumnDaysAct">
-                        <div class="searchDayActivity" id="searchDayActivity"> </div>
-                        <div class="searchDayActivity" id="searchDayActivity"> </div>
-                        <div class="searchDayActivity" id="searchDayActivity"> </div>
-                    </div>
-                    <div class="rightColumnDaysAct">
-                        <div class="searchDayActivity" id="searchDayActivity"> </div>
-                        <div class="searchDayActivity" id="searchDayActivity"> </div>
-                        <div class="searchDayActivity" id="searchDayActivity"> </div>
-                        <div class="searchDayActivity" id="searchDayActivity"> </div>                
-                    </div> 
-                
+                <div class="leftColumnDaysAct">
+                    <div class="searchDayActivity" id="searchDayActivity"> </div>
+                    <div class="searchDayActivity" id="searchDayActivity"> </div>
+                    <div class="searchDayActivity" id="searchDayActivity"> </div>
+                </div>
+                <div class="rightColumnDaysAct">
+                    <div class="searchDayActivity" id="searchDayActivity"> </div>
+                    <div class="searchDayActivity" id="searchDayActivity"> </div>
+                    <div class="searchDayActivity" id="searchDayActivity"> </div>
+                    <div class="searchDayActivity" id="searchDayActivity"> </div>                
+                </div>                
             </div>   
         </div>
 
@@ -100,7 +98,6 @@
                     });
 
                     $('.panel').eq(pos).each(function(){
-                        console.log($(this).find('.accordion2').length);
                         $(this).find('.panel2').each(function(){
                             $(this).hide();
                         })
@@ -164,7 +161,7 @@
                                     @elseif (is_null($eachInscription->filenameIns) && is_null($eachInscription->isCompletedIns))
                                         color: '#000000', 
                                     @elseif ($eachInscription->filenameIns && $eachInscription->isCompletedIns == 0)
-                                        color: '#ffa500', 
+                                        color: '#ffa500',
                                     @endif    
                                 @endif
                             @endforeach

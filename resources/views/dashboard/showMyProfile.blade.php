@@ -42,7 +42,7 @@
                             <div class="orgVolMyProfile">
                                 {{$volunteer->organiVol}}
                             </div>
-                            
+
                         </div>
                                      
                     </div>
@@ -63,19 +63,14 @@
                             <div class="addressVolMyProfile">
                                 {{$volunteer->typeViaVol}} {{$volunteer->direcVol}} {{$volunteer->numVol}}
                             </div>
-
-                            <div class="locationVolMyProfile">
-                                {{$volunteer->stateVol}} {{$volunteer->townVol}} {{$volunteer->codPosVol}}
-                            </div>
+                     
                         </div>
 
                         <div class="bottomRightCol">
                             <ul>
                                 <li> <i class="bx bx-list-ol"></i> <a id="a1">Historial</a></li>
                                 <li> <i class="bx bxs-user"></i> <a id="a2">Información</a></li>
-                            </ul>
-
-                            
+                            </ul>   
                             <div class="containerDataMyProfile" id="id2">
                                 
                             </div>                           

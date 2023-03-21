@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\TypeActivity;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Activity extends Model
 {
@@ -82,4 +83,15 @@ class Activity extends Model
             return "#ffa500";
         }
     }
+
+    public function entity():BelongsToMany
+    {
+        return $this->belongsToMany(
+            Entity::class,
+            'activity_entities',
+            'activity_id',
+            'entity_id',
+        );
+    }
+
 }
