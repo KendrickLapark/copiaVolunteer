@@ -13,6 +13,7 @@
                     {{-- <span class="badge"> </span> --}}
                         Tienes notificaciones
                     <i class='bx bx-caret-right' style="font-size: 20px"></i>
+                    
             </div>
         </div>
     @else
@@ -22,6 +23,7 @@
                     {{-- <span class="badge"> </span> --}}
                         No tienes notificaciones
                     <i class='bx bx-caret-right'></i>
+                    
             </div>
         </div>
     @endif 

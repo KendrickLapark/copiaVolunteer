@@ -67,44 +67,7 @@
             </div>
 
             <div class="calendarContainer center">
-                <div id='calendar'></div>
-                  
-                 <!-- Modal created para mostrar las actividades programadas en un día cuando clickamos en el calendar by pepe -->
-                 <div class="modal fade" id="fullcalendarModal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-                        </div>
-                        <script>
-                            console.log($('#exampleModalLabel').text());
-                        </script> 
-                        <div class="modal-body" id="prueba">
-                             @foreach ($activities as $activity)
-                             
-                                <div class="modal-activity">
-                                    <div class="modal-activity-title">
-                                        {{$activity->nameAct}}
-                                        
-                                    </div>
-                                    <div class="modal-activity-description">
-                                        {{$activity->descAct}}
-
-                                    </div>
-                                    <div class="modal-activity-horary">
-                                        {{$activity->dateAct}}
-                                     </div>                       
-                                </div>
-                                    <br>
-                           
-                             @endforeach 
- 
-                        </div>
-                        <div class="modal-footer">
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                <div id='calendar'></div>      
 
             </div>
 
@@ -131,8 +94,6 @@
         </div>
     </div>
 
-            
-    
     <script>
         $(document).ready(function() {
 
@@ -201,38 +162,6 @@
                 editable: false,
                 selectable: true,
                 selectHelper: true,               
-
-                dayClick: function( date, jsEvent, view){               
-
-                    //date=moment(date).format("dddd DD [de] MMMM");  
-                    
-                    //$request->session()->flash('FechaSeleccionada', date);
-
-                    $('#fullcalendarModal .modal-title').text(date); 
-
-                    $('#fullcalendarModal').modal('show');  
-
-                    
-
-
-                    /* @foreach($activities as $activity){                       
-
-                        @if(strtotime(date('d-m-Y', strtotime($activity->dateAct))) == strtotime(date('d-m-Y')))                    
-
-                            /$('#fullcalendarModal .modal-activity-title').text('{{$activity->nameAct}}');
-                            $('#fullcalendarModal .modal-activity-description').text('{{$activity->descAct}}');
-                            $('#fullcalendarModal .modal-activity-horary').text('{{$activity->timeAct}}'); 
-
-                            
-
-                            $('#fullcalendarModal').modal('show');  
-
-                        @endif
-                       
-                    }
-                    @endforeach        */                        
-                                        
-                },
 
                 eventClick: function(event) {
                     location.href = 'showThatActivity/' + event.id;

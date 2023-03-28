@@ -18,9 +18,9 @@
     <header>
         @include('common.header')
     </header>
-    <div id="main">
+    <main>
         @yield('content')
-    </div>
+    </main>
     <footer>
         @include('common.footer')
     </footer>

@@ -14,16 +14,16 @@
             <input type="radio" name="radio-btn" id="radio4">
 
             <div class="slide first">
-                <img src="images/sliderhome/1.png" alt="">
+                <img src="images/sliderhome/1.png" alt="Tres compañeros sonriéndo en las afueras de las instalaciones">
             </div>
             <div class="slide">
-                <img src="images/sliderhome/2.png" alt="">
+                <img src="images/sliderhome/2.png" alt="Tres compañeros chocando sus manos dentro de las instalaciones">
             </div>
             <div class="slide">
-                <img src="images/sliderhome/3.png" alt="">
+                <img src="images/sliderhome/3.png" alt="Tres compañeros embalando alimentos">
             </div>
             <div class="slide">
-                <img src="images/sliderhome/4.png" alt="">
+                <img src="images/sliderhome/4.png" alt="Tres compañeros sonriéndo en las afueras de las instalaciones en un día soleado">
             </div>
 
             <div class="navigation-auto">
@@ -36,10 +36,10 @@
         </div>
 
         <div class="navigation-manual">
-            <label for="radio1" class="manual-btn"></label>
-            <label for="radio2" class="manual-btn"></label>
-            <label for="radio3" class="manual-btn"></label>
-            <label for="radio4" class="manual-btn"></label>
+            <label for="radio1" class="manual-btn" tabindex="0"></label>
+            <label for="radio2" class="manual-btn" tabindex="0"></label>
+            <label for="radio3" class="manual-btn" tabindex="0"></label>
+            <label for="radio4" class="manual-btn" tabindex="0"></label>
         </div>
         
     </div>

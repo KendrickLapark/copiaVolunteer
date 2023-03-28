@@ -6,22 +6,21 @@
         <button class="accordion" id="accordion" style="background-color: grey">No hay actividades disponibles 
             <i class='bx bxs-chevron-down'></i> </button>
     @endif 
-        <div class="panel">
+        <div class="panel">    
             @foreach($activities as $activity)
-                @foreach($activity->entity as $entity)
-                    <button class="accordion2">{{$entity->nameEntity}} <i class='bx bxs-chevron-down' style="font-size=20px;"></i> </button>
-                    <div class="panel2">
-                        <ul class="ul-accordion2">
-                            <li> {{$activity->nameAct}} </li>
-                            <li> {{$activity->formaAct}} </li>
-                            <li id="li-accordion2"> 
-                                <span class="spanTimeAct"> {{date('H:i', strtotime($activity->timeAct)) 
-                                ." - ".date('H:i', strtotime($activity->endTimeAct))}} horas </span>                        
-                                <a href={{ route('dashboard.showThatActivity', [$activity->activity_id])}} class="buttonSignUp"> Me apunto </a>
-                            </li>
-                        </ul>
-                    </div>
-                @endforeach
+                <button class="accordion2">{{$activity->entity[0]->nameEntity}} <i class='bx bxs-chevron-down' style="font-size=20px;"></i> </button>
+                <div class="panel2">
+                    <ul class="ul-accordion2">
+                        <li> {{$activity->nameAct}} </li>
+                        <li> {{$activity->formaAct}} </li>
+                        <li id="li-accordion2"> 
+                            <span class="spanTimeAct"> {{date('H:i', strtotime($activity->timeAct)) 
+                            ." - ".date('H:i', strtotime($activity->endTimeAct))}} horas </span>                        
+                            <a href={{ route('dashboard.showThatActivity', [$activity->activity_id])}} class="buttonSignUp"> Me apunto </a>
+                        </li>
+                    </ul>
+                </div>
             @endforeach
+                    
         </div>
 </div>

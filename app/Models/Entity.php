@@ -23,7 +23,6 @@ class Entity extends Model
         'activity_entities',
         'activity_id',
         'entity_id',
-
         );
     }
 

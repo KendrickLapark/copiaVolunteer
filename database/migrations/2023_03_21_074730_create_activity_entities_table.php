@@ -17,6 +17,7 @@ return new class extends Migration
             $table->increments('act_entity_id');
             $table->integer('activity_id')->unsigned();
             $table->integer('entity_id')->unsigned();
+            $table->date("dateAct");
             $table->foreign('activity_id')->references('activity_id')->on('activities')
                 ->onDelete('cascade');
             $table->foreign('entity_id')->references('entity_id')->on('entities')
