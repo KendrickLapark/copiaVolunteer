@@ -5,7 +5,6 @@
     <span class="dashboard" id="title">Dashboard</span>
 </div>
 @if (Auth::user()->isAdminVol)
-    
         <div class="profile-details">       
             <a href="{{ route('dashboard.changeAvatar') }}">
                 @if (Auth::user()->imageVol == 0 || Auth::user()->imageVol == null)

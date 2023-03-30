@@ -23,17 +23,21 @@
 </head>
 
 <body>
-    @include('dashboard.partials.leftBar')
+    <nav>
+        @include('dashboard.partials.leftBar')
+    </nav>
 
-    <section class="home-section">
-        <nav>
+    <div class="home-section">
+        <header>
             @include('dashboard.partials.header')
-        </nav>
+        </header>
 
         <div class="home-content">
-            @yield('content')
+            <main>
+                @yield('content')
+            </main>
         </div>
-    </section>
+    </div>
 
     <script type="text/javascript">
         let sidebar = document.querySelector(".sidebar");

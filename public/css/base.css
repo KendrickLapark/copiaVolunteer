@@ -346,7 +346,7 @@ div.titleFoot {
 
 }
 
-.eachCell.withText .header {
+.eachCell.withText h1 {
     color: #004a98;
     font-size: 1.5rem;
     

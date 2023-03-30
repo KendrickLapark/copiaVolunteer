@@ -11,7 +11,7 @@
             <div class="sectionTitle">Accede a tu Área Privada</div>
             <hr />
             @if (session()->get('errorLogin'))
-                <div class="formSubmitError">
+                <div class="formSubmitError" tabindex="0">
                     {{ session()->get('errorLogin') }}
                 </div>
             @endif
