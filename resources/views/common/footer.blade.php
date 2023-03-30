@@ -1,5 +1,5 @@
 <div id="divFooter">
-    <div id="contentFooter">
+    <div id="contentFooter" id="pie">
         <div class="eachColFoot">
             <img width="143" height="77" src="<?php echo asset('images/logo-fundacion-magtel-vertical-blanco.png'); ?>" alt="footer-logo" />
         </div>

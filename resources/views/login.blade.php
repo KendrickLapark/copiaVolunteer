@@ -19,7 +19,7 @@
             <form method="POST" action="{{ route('vol.doLogin') }}">
                 @csrf
                 <div class="eachLoginElement">
-                    <label id="numDocVolLabel" class="formSections" for="numDocVol">Numero de documento:</label>
+                    <label id="numDocVolLabel" class="formSections" for="numDocVol">Número de documento:</label>
                     <br />
                     <input type="text" id="numDocVol" name="numDocVol" value="{{ old('numDocVol') }}"
                         style="margin-right: -10px;" required>

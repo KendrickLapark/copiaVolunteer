@@ -15,13 +15,13 @@
 </head>
 
 <body>
-    <header>
+    <header id="header">
         @include('common.header')
     </header>
-    <main>
+    <main id="main">
         @yield('content')
     </main>
-    <footer>
+    <footer id="footer">
         @include('common.footer')
     </footer>
 </body>

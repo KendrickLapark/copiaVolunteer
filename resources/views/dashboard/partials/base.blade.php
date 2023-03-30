@@ -23,14 +23,12 @@
 </head>
 
 <body>
-    <nav>
         @include('dashboard.partials.leftBar')
-    </nav>
 
     <div class="home-section">
-        <header>
+        <nav>
             @include('dashboard.partials.header')
-        </header>
+        </nav>
 
         <div class="home-content">
             <main>
