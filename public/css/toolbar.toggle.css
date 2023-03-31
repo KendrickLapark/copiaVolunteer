@@ -20,6 +20,13 @@
 
 }
 
+.toolbar-toggle a img{
+    position:fixed;
+    top:0;
+    left:0;
+    background-color: brown;
+}
+
 .toolbar-inner{
     background-color: white;
     position: fixed;
@@ -34,7 +41,6 @@
 .toolbar-inner p{
     height: 70px;
     font-size: 18px;
-    vertical-align: middle;
 }
 
 .toolbar-item{
@@ -42,5 +48,7 @@
     height: 50px;
     font-size: 18px;
     border: 1px solid red;
+
+    align-items: center;
     
 }

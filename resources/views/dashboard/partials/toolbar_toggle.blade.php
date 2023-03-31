@@ -1,6 +1,6 @@
 <div class="toolbar">
     <div class="toolbar-toggle">
-        <i class="<bx bx-accessibility />"></i>
+        <a href=""><img src="'images/icons/accesibility.png'" alt=""></a>
     </div>
 
     <div class="toolbar-overlay">
@@ -11,13 +11,41 @@
 
                 <ul class="toolbar-items">
 
-                    <li class="toolbar-item"> Aumentar texto </li>
-                    <li class="toolbar-item"> Disminuir texto </li>
-                    <li class="toolbar-item"> Escala de grises </li>
-                    <li class="toolbar-item"> Alto contraste </li>
-                    <li class="toolbar-item"> Contraste negativo </li>
-                    <li class="toolbar-item"> Fondo claro </li>
-                    <li class="toolbar-item"> Restablecer </li>
+                    <li class="toolbar-item"> 
+                        <a href="">
+                            <span class="toolbar-text"> Aumentar texto </span>
+                        </a>
+                    </li>
+                    <li class="toolbar-item"> 
+                        <a href="">
+                            <span class="toolbar-text"> Disminuir texto </span>
+                        </a>
+                    </li>
+                    <li class="toolbar-item">
+                        <a href="">
+                            <span class="toolbar-text"> Escala de grises </span>
+                        </a>
+                    </li>
+                    <li class="toolbar-item">
+                        <a href="">
+                            <span class="toolbar-text"> Alto contraste </span>
+                        </a>
+                    </li>
+                    <li class="toolbar-item">
+                        <a href="">
+                            <span class="toolbar-text"> Contraste negativo </span>
+                        </a>
+                    </li>
+                    <li class="toolbar-item">
+                        <a href="">
+                            <span class="toolbar-text"> Fondo claro </span>
+                        </a>
+                    </li>
+                    <li class="toolbar-item">
+                        <a href="">
+                            <span class="toolbar-text"> Restablecer </span>
+                        </a>
+                    </li>
 
                 </ul>
 
