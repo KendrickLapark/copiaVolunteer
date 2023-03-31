@@ -15,7 +15,6 @@
     top:0;
     left:0;
     padding: auto;
-    align-items: center;
     background-color: brown;
 
 }
@@ -29,10 +28,9 @@
 
 .toolbar-inner{
     background-color: white;
-    position: fixed;
+    position: fixed;  /* cambiar para mover la posición de la toolbar */
     right:0;
     top:300px;
-    text-align: center;
     width: 240px;
     border: 1px solid blue;
 
@@ -41,6 +39,7 @@
 .toolbar-inner p{
     height: 70px;
     font-size: 18px;
+    
 }
 
 .toolbar-item{
@@ -48,7 +47,17 @@
     height: 50px;
     font-size: 18px;
     border: 1px solid red;
-
-    align-items: center;
     
+}
+
+.toolbar-items li:hover{
+    background-color: aqua;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+
+.toolbar-item li a{
+    display:block;
+    text-decoration: none;
+    letter-spacing: 1px;
 }
