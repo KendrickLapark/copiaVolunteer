@@ -26,7 +26,7 @@
 <body>
         @include('dashboard.partials.leftBar')
 
-        @include('dashboard.partials.toolbar_toggle')
+        
 
     <div class="home-section">
         <nav>
@@ -38,6 +38,8 @@
                 @yield('content')
             </main>
         </div>
+
+        @include('dashboard.partials.toolbar_toggle')
     </div>
 
     <script type="text/javascript">

@@ -1,10 +1,46 @@
+.toolbar{
+    background-color: blueviolet;
+    position: fixed;
+    right:0;
+    top:300px;
+    text-align: center;
+    width: 320px;
+    height: 7.5%;
+    border: 1px solid blue;
+
+}
+
+.toolbar-toggle{
+    position:absolute;
+    top:0;
+    left:0;
+    padding: auto;
+    align-items: center;
+    background-color: brown;
+
+}
+
 .toolbar-inner{
-    background-color: red;
-    display: flex;
-    flex-direction: column;
+    background-color: white;
+    position: fixed;
+    right:0;
+    top:300px;
+    text-align: center;
+    width: 240px;
+    border: 1px solid blue;
+
+}
+
+.toolbar-inner p{
+    height: 70px;
+    font-size: 18px;
+    vertical-align: middle;
 }
 
 .toolbar-item{
     color: black;
+    height: 50px;
     font-size: 18px;
+    border: 1px solid red;
+    
 }
