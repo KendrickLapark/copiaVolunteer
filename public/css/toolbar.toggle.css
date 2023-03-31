@@ -1,0 +1,10 @@
+.toolbar-inner{
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+}
+
+.toolbar-item{
+    color: black;
+    font-size: 18px;
+}
