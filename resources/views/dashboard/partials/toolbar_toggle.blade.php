@@ -1,6 +1,6 @@
 <div class="toolbar">
     <div class="toolbar-toggle">
-        <a href=""><img src="'images/icons/accesibility.png'" alt=""></a>
+        <a href=""><x-vaadin-accessibility class="toggle-icon"/></a>
     </div>
 
     <div class="toolbar-overlay">
@@ -13,37 +13,37 @@
 
                     <li class="toolbar-item"> 
                         <a href="">
-                            <span class="toolbar-text"> Aumentar texto </span>
+                            <span class="toolbar-text"> <x-heroicon-o-magnifying-glass-plus class="toolbar-icon"/> Aumentar texto </span>
                         </a>
                     </li>
                     <li class="toolbar-item"> 
                         <a href="">
-                            <span class="toolbar-text"> Disminuir texto </span>
+                            <span class="toolbar-text"> <x-heroicon-o-magnifying-glass-minus class="toolbar-icon"/> Disminuir texto </span>
                         </a>
                     </li>
                     <li class="toolbar-item">
                         <a href="">
-                            <span class="toolbar-text"> Escala de grises </span>
+                            <span class="toolbar-text" > <x-vaadin-barcode class="toolbar-icon"/> Escala de grises </span>
                         </a>
                     </li>
                     <li class="toolbar-item">
                         <a href="">
-                            <span class="toolbar-text"> Alto contraste </span>
+                            <span class="toolbar-text"> <x-ri-contrast-fill class="toolbar-icon"/> Alto contraste </span>
                         </a>
                     </li>
                     <li class="toolbar-item">
                         <a href="">
-                            <span class="toolbar-text"> Contraste negativo </span>
+                            <span class="toolbar-text"> <x-vaadin-eye class="toolbar-icon"/> Contraste negativo </span>
                         </a>
                     </li>
                     <li class="toolbar-item">
                         <a href="">
-                            <span class="toolbar-text"> Fondo claro </span>
+                            <span class="toolbar-text"> <x-vaadin-lightbulb class="toolbar-icon"/> Fondo claro </span>
                         </a>
                     </li>
                     <li class="toolbar-item">
                         <a href="">
-                            <span class="toolbar-text"> Restablecer </span>
+                            <span class="toolbar-text"> <x-simpleline-reload class="toolbar-icon"/> Restablecer </span>
                         </a>
                     </li>
 

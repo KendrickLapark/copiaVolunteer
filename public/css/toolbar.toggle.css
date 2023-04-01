@@ -2,25 +2,27 @@
     background-color: blueviolet;
     position: fixed;
     right:0;
-    top:300px;
-    text-align: center;
-    width: 320px;
-    height: 7.5%;
+    top:10em;
+    height: 2.7em;
     border: 1px solid blue;
 
 }
 
+.toggle-icon{
+    width: 34px;
+    padding: 3px;
+
+}
+
 .toolbar-toggle{
-    position:absolute;
-    top:0;
-    left:0;
-    padding: auto;
+    width:34px;
     background-color: brown;
+    top: 12em;
+    height: 2.7em;
 
 }
 
 .toolbar-toggle a img{
-    position:fixed;
     top:0;
     left:0;
     background-color: brown;
@@ -28,17 +30,20 @@
 
 .toolbar-inner{
     background-color: white;
-    position: fixed;  /* cambiar para mover la posición de la toolbar */
+      /* cambiar para mover la posición de la toolbar */
     right:0;
-    top:300px;
-    width: 240px;
+    top:10em;
+    width: 15.5em;
     border: 1px solid blue;
+    transition: 0.5s ease;
+    /* transform: translateX(15.5em); */
 
 }
 
 .toolbar-inner p{
     height: 70px;
     font-size: 18px;
+    padding: 15px 10px;
     
 }
 
@@ -46,8 +51,14 @@
     color: black;
     height: 50px;
     font-size: 18px;
+    padding: 15px 10px;
     border: 1px solid red;
+    transition: 0.3s ease;
     
+}
+
+.toolbar-icon{
+    width: 20px;
 }
 
 .toolbar-items li:hover{
