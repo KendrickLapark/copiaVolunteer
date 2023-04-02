@@ -6,6 +6,9 @@
     <div class="dirInfoUser">
         <strong>Dirección:</strong> {{$volunteer->typeViaVol}} {{$volunteer->direcVol}} {{$volunteer->numVol}}
     </div>
+    <div class="locationVolMyProfile">
+        <strong>Localidad:</strong> {{$volunteer->stateVol}} {{$volunteer->townVol}} {{$volunteer->codPosVol}}
+    </div>
     <div class="persMailVolMyProfile">
         <strong>Correo electrónico:</strong> {{$volunteer->persMailVol}}
     </div>

@@ -36,11 +36,29 @@
                     </p>
                 </div>
                 <div class="eachCreateActivityElement">
-                    <p>
-                        <label id="entityActLabel" class="formSections" for="entityAct">Entidad de la actividad:</label>
-                        <br />
-                        <input type="text" id="entityAct" name="entityAct" value="{{ $activity->entityAct }}" required>
-                    </p>
+                    <p>Si quieres seleccionar más de uno usa las teclas Mayúscula o control</p>
+                    {{-- <select name="Entities[]" id="Entities" multiple="multiple" class="multipleSelect big">
+                        @foreach ($entities as $entity)
+                            <option value="{{ $entity->entity_id }}">{{ $entity->nameEntity }}</option>
+                        @endforeach
+                    </select> --}}
+
+                    <?php
+                    $check = [];
+                    foreach ($activity->entity as $selectedEntity) {
+                        array_push($check, $selectedEntity->entity_id);
+                    }
+                    echo '<select name="Entities[]" id="Entities" multiple="multiple" class="multipleSelect big">';
+                    foreach ($entities as $entity) {
+                        if (in_array($entity->entity_id, $check)) {
+                            echo '<option value="' . $entity->entity_id . '" selected>' . $entity->nameEntity . '</option>';
+                        } else {
+                            echo '<option value="' . $entity->entity_id . '">' . $entity->nameEntity . '</option>';
+                        }
+                    }
+                    echo '</select>';
+                    ?>
+
                 </div>
                 <div class="eachCreateActivityElement">
                     <p>

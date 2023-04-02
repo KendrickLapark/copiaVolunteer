@@ -17,7 +17,6 @@ return new class extends Migration
             $table->increments('activity_id');
             $table->string('nameAct',60)->nullable(false);
             $table->string('descAct',500)->nullable(false);
-            $table->string('entityAct',50)->nullable(false);
             $table->string('direAct',100)->nullable(false);
             $table->time("timeAct");
             $table->time("endTimeAct");

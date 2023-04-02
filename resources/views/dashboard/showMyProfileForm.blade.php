@@ -361,8 +361,7 @@
             </div>
 
             <div class="divButtonMyProfile">              
-                    <p><button type="submit" class="botonesControl" id="updateMyProfile">Actualizar</button></p>
-                
+                    <p><button type="submit" class="botonesControl" id="updateMyProfile">Actualizar</button></p>               
             </div>
 
         </form>

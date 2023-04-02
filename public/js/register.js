@@ -251,8 +251,8 @@ $(() => {
             $("#shirtSizeError").css("display", "inline");
         } else {
             goNext = true;
-            $("#shirtSizeError").css("display", "none");
-        }
+            $("#shirtSizeError").css("display", "none");        
+        }     
         return goNext
     }
 

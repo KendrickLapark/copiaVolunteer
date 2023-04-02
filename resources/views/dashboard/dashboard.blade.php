@@ -13,6 +13,7 @@
                     {{-- <span class="badge"> </span> --}}
                         Tienes notificaciones
                     <i class='bx bx-caret-right' style="font-size: 20px"></i>
+                    
             </div>
         </div>
     @else
@@ -22,6 +23,7 @@
                     {{-- <span class="badge"> </span> --}}
                         No tienes notificaciones
                     <i class='bx bx-caret-right'></i>
+                    
             </div>
         </div>
     @endif 
@@ -34,7 +36,7 @@
             @foreach ($inscriptions as $inscription)                      
                 <div class="mainActivityDashboard">
                     @if($inscription->filenameIns == null)
-                        @include('dashboard.partials.itemListInscription')   
+                        @include('dashboard.partials.itemListInscription')
                     @elseif($inscription->filenameIns != null)
                         <div class="msg_Inscription">
                             Inscripcion realizada para actividad : {{$inscription->activity->nameAct}}

@@ -6,9 +6,9 @@
         <button class="accordion" id="accordion" style="background-color: grey">No hay actividades disponibles 
             <i class='bx bxs-chevron-down'></i> </button>
     @endif 
-        <div class="panel">
+        <div class="panel">    
             @foreach($activities as $activity)
-                <button class="accordion2">{{$activity->entityAct}} <i class='bx bxs-chevron-down' style="font-size=20px;"></i> </button>
+                <button class="accordion2">{{$activity->entity[0]->nameEntity}} <i class='bx bxs-chevron-down' style="font-size=20px;"></i> </button>
                 <div class="panel2">
                     <ul class="ul-accordion2">
                         <li> {{$activity->nameAct}} </li>
@@ -21,5 +21,6 @@
                     </ul>
                 </div>
             @endforeach
+                    
         </div>
 </div>

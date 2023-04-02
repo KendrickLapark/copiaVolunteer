@@ -13,49 +13,49 @@
             @endforeach
         @endif
 
-        <form method="POST" action="{{ route('vol.save') }}" id="registerForm">
+        <form method="POST" action="{{ route('vol.save') }}" id="registerForm" aria-label="Formulario de registro">
             @csrf
             <div id="registerSheetOne">
                 <div class="RegisterContainer">
                     <div class="eachRegisterElement">
                         <label id="nameVolLabel" class="formSections" for="nameVol">Nombre:<span
-                                class="redMark">*</span></label>
+                                class="redMark" aria-hidden="true">*</span></label>
                         <br />
-                        <input type="text" id="nameVol" name="nameVol" required autofocus>
+                        <input type="text" id="nameVol" name="nameVol" autocomplete="nombre" required autofocus>
                         <br />
-                        <p id="nameError" class="formError">El nombre es obligatorio.</p>
+                        <label id="nameError" class="formError" for="nameVol">Error, el nombre es obligatorio.</label>
                     </div>
-
+                            
                     <div class="eachRegisterElement">
                         <label id="surnameVolLabel" class="formSections" for="surnameVol">Apellido:<span
-                                class="redMark">*</span></label>
+                                class="redMark" aria-hidden="true">*</span></label>
                         <br />
                         <input type="text" id="surnameVol" name="surnameVol" required>
                         <br />
-                        <p id="surnameError" class="formError">El apellido es obligatorio.</p>
+                        <label id="surnameError" class="formError" for="surnameVol">Error, el apellido es obligatorio.</label>
                     </div>
 
                     <div class="eachRegisterElement">
                         <label id="surname2VolLabel" class="formSections" for="surname2Vol">Segundo Apellido:<span
-                                class="redMark">*</span></label>
+                                class="redMark" aria-hidden="true">*</span></label>
                         <br />
                         <input type="text" id="surname2Vol" name="surname2Vol" required>
                         <br />
-                        <p id="surname2Error" class="formError">El segundo apellido es obligatorio.</p>
+                        <label id="surname2Error" class="formError" for="surname2Vol">Error, el segundo apellido es obligatorio.</label>
                     </div>
                 </div>
                 <div class="RegisterContainer">
                     <div class="eachRegisterElement">
                         <label id="birthDateVolLabel" class="formSections" for="birthDateVol">Fecha de Nacimiento:<span
-                                class="redMark">*</span></label>
+                                class="redMark" aria-hidden="true">*</span></label>
                         <br />
                         <input type="date" id="birthDateVol" name="birthDateVol" required>
                         <br />
-                        <p id="birthDateError" class="formError">La Fecha de Nacimiento no es correcta.</p>
+                        <label id="birthDateError" class="formError" for="birthDateVol">Error, la fecha de nacimiento no es correcta.</label>
                     </div>
                     <div class="eachRegisterElement">
                         <label id="typeDocVolLabel" class="formSections" for="typeDocVol">Tipo de documento:<span
-                                class="redMark">*</span></label>
+                                class="redMark" aria-hidden="true">*</span></label>
                         <br />
                         <select id="typeDocVol" name="typeDocVol" required>
                             <option value="">Seleccione:</option>
@@ -63,58 +63,58 @@
                             <option value="nie">NIE</option>
                         </select>
                         <br />
-                        <p id="typeDocError" class="formError">El tipo de documento es obligatorio.</p>
+                        <label id="typeDocError" class="formError" for="typeDocVol">Error, el tipo de documento es obligatorio.</label>
                     </div>
                     <div class="eachRegisterElement">
                         <label id="numDocVolLabel" class="formSections" for="numDocVol">Número de documento:<span
-                                class="redMark">*</span></label>
+                                class="redMark" aria-hidden="true">*</span></label>
                         <br />
                         <input type="text" id="numDocVol" name="numDocVol" required>
                         <br />
-                        <p id="numDocError" class="formError">Número de documento es obligatorio.</p>
-                        <p id="numDocWrongError" class="formError">Número de documento no es Valido.</p>
+                        <label id="numDocError" class="formError" for="numDocVol">Error, el número de documento es obligatorio.</label>
+                        <label id="numDocWrongError" class="formError" for="numDocVol">Error, el número de documento no es válido.</label>
 
                     </div>
                 </div>
                 <div class="RegisterContainer" id="registerAuth">
                     <div class="eachRegisterElement">
                         <label id="nameAuthVolLabel" class="formSections" for="nameAuthVol">Nombre del autorizador:<span
-                                class="redMark">*</span></label>
+                                class="redMark" aria-hidden="true">*</span></label>
                         <br />
                         <input type="text" id="nameAuthVol" name="nameAuthVol">
                         <br />
-                        <p id="nameVolError" class="formError">El nombre del autorizador es obligatorio.</p>
+                        <label id="nameVolError" class="formError" for="nameAuthVol">Error, el nombre del autorizador es obligatorio.</label>
                     </div>
                     <div class="eachRegisterElement">
                         <label id="tlfAuthVolLabel" class="formSections" for="tlfAuthVol">Teléfono del autorizador:<span
-                                class="redMark">*</span></label>
+                                class="redMark" aria-hidden="true">*</span></label>
                         <br />
-                        <input type="text" id="tlfAuthVol" name="tlfAuthVol">
+                        <input type="tel" id="tlfAuthVol" name="tlfAuthVol">
                         <br />
-                        <p id="telAuthError" class="formError">El Teléfono es obligatorio.</p>
+                        <label id="telAuthError" class="formError" for="tlfAuthVol">Error, el teléfono es obligatorio.</label>
                     </div>
                     <div class="eachRegisterElement">
                         <label id="numDocAuthVolLabel" class="formSections" for="numDocAuthVol">Número de documento del
-                            autorizador:<span class="redMark">*</span></label>
+                            autorizador:<span class="redMark" aria-hidden="true">*</span></label>
                         <br />
                         <input type="text" id="numDocAuthVol" name="numDocAuthVol">
                         <br />
-                        <p id="numDocAuthError" class="formError">Número de documento es obligatorio.</p>
-                        <p id="numDocAuthWrongError" class="formError">Número de documento no es Valido.</p>
+                        <label id="numDocAuthError" class="formError" for="numDocAuthVol">Error, el número de documento es obligatorio.</label>
+                        <label id="numDocAuthWrongError" class="formError" for="numDocAuthVol">Error, el número de documento no es Valido.</label>
                     </div>
                 </div>
                 <div class="RegisterContainer">
                     <div class="eachRegisterElement">
                         <label id="telVolLabel" class="formSections" for="telVol">Teléfono:<span
-                                class="redMark">*</span></label>
+                                class="redMark" aria-hidden="true">*</span></label>
                         <br />
-                        <input type="text" id="telVol" name="telVol" required>
+                        <input type="tel" id="telVol" name="telVol" required>
                         <br />
-                        <p id="telError" class="formError">El Teléfono es obligatorio.</p>
+                        <label id="telError" class="formError" for="telVol">Error, el teléfono es obligatorio.</label>
                     </div>
                     <div class="eachRegisterElement">
                         <label id="sexVolLabel" class="formSections" for="sexVol">Sexo:<span
-                                class="redMark">*</span></label>
+                                class="redMark" aria-hidden="true">*</span></label>
                         <br />
                         <select id="sexVol" name="sexVol" required>
                             <option value="">Seleccione:</option>
@@ -123,11 +123,11 @@
                             <option value="otro">Otro</option>
                         </select>
                         <br />
-                        <p id="sexVolError" class="formError">El sexo es obligatorio.</p>
+                        <label id="sexVolError" class="formError" for="sexVol">Error, el sexo es obligatorio.</label>
                     </div>
                     <div class="eachRegisterElement">
                         <label id="shirtSizeVolLabel" class="formSections" for="shirtSizeVol">Talla de camiseta:<span
-                                class="redMark">*</span></label>
+                                class="redMark" aria-hidden="true">*</span></label>
                         <br />
                         <select id="shirtSizeVol" name="shirtSizeVol" required>
                             <option value="">Seleccione:</option>
@@ -140,27 +140,27 @@
                             <option value="3XL">3XL</option>
                         </select>
                         <br />
-                        <p id="shirtSizeError" class="formError">Talla de camiseta es obligatoria.</p>
+                        <label id="shirtSizeError" class="formError" for="shirtSizeVol">Error, la talla de camiseta es obligatoria.</label>
                     </div>
                 </div>
                 <div class="RegisterContainer">
                     <div class="eachRegisterElement">
                         <label id="persMailVolLabel" class="formSections" for="persMailVol">Correo electrónico:<span
-                                class="redMark">*</span></label>
+                                class="redMark" aria-hidden="true">*</span></label>
                         <br />
                         <input type="email" id="persMailVol" name="persMailVol" required>
                         <br />
-                        <p id="persMailError" class="formError">El correo electrónico es obligatorio.</p>
-                        <p id="persMailWrongError" class="formError">El correo electrónico no es Valido.</p>
+                        <label id="persMailError" class="formError" for="persMailVol">Error, el correo electrónico es obligatorio.</label>
+                        <label id="persMailWrongError" class="formError" for="persMailVol">Error, el correo electrónico no es válido.</label>
                     </div>
                     <div class="eachRegisterElement">
                         <label id="persMailConfVolLabel" class="formSections" for="persMailConfVol">Repetir Correo
-                            electrónico:<span class="redMark">*</span></label>
+                            electrónico:<span class="redMark" aria-hidden="true">*</span></label>
                         <br />
                         <input type="email" id="persMailConfVol" name="persMailConfVol" required>
                         <br />
-                        <p id="persMailConfError" class="formError">El correo electrónico es obligatorio.</p>
-                        <p id="persMailMatchError" class="formError">Los Correos electrónicos no coinciden.</p>
+                        <label id="persMailConfError" class="formError" for="persMailConfVol">Error, el correo electrónico es obligatorio.</label>
+                        <label id="persMailMatchError" class="formError" for="persMailConfVol">Error, los correos electrónicos no coinciden.</label>
                     </div>
                     <div class="eachRegisterElement" style="display:none;">
                         &nbsp;
@@ -169,15 +169,15 @@
                 <div class="RegisterContainer" style="margin-bottom: 50px;">
                     <div class="eachLongRegisterElement">
                         <input type="checkbox" name="dataConf" id="dataConf" required>
-                        <label id="dataConfLabel" class="formSections" for="dataConf"><span class="redMark">*</span>He
+                        <label id="dataConfLabel" class="formSections" for="dataConf"><span class="redMark" aria-hidden="true">*</span>He
                             leído y aceptado la política de privacidad. </label>
                         <br />
-                        <p id="dataConfError" class="formError">Debes de marcar esto.</p>
+                        <label id="dataConfError" class="formError" for="dataConf">Error, debes aceptar la política de privacidad.</label>
                     </div>
                     <div class="eachLongRegisterElement">
                         <input type="checkbox" name="offenseConf" id="offenseConf" required>
                         <label id="offenseConfLabel" class="formSections" for="offenseConf"><span
-                                class="redMark">*</span>Que la persona cuyos datos figuran como titular de la cuenta de
+                                class="redMark" aria-hidden="true">*</span>Que la persona cuyos datos figuran como titular de la cuenta de
                             usuario carece de antecedentes penales por cualquiera de los delitos a que hace referencia el
                             apartado 5º del artículo 8 de la Ley 45/2015, de 14 de octubre, de Voluntariado, el cual señala
                             textualmente que: "No podrán ser voluntarias las personas que tengan antecedentes penales no
@@ -187,7 +187,7 @@
                             por delitos de terrorismo en programas cuyos destinatarios hayan sido o puedan ser víctimas de
                             estos delitos". </label>
                         <br />
-                        <p id="offenseConfError" class="formError">Debes de marcar esto.</p>
+                        <label id="offenseConfError" class="formError" for="offenseConf">Error, debes aceptar este apartado.</label>
                     </div>
                 </div>
                 <div class="RegisterContainer">
@@ -207,7 +207,7 @@
                 <div class="RegisterContainer">
                     <div class="eachRegisterElement">
                         <label id="typeViaVolLabel" class="formSections" for="typeViaVol">Tipo de vía:<span
-                                class="redMark">*</span></label>
+                                class="redMark" aria-hidden="true">*</span></label>
                         <br />
                         <select id="typeViaVol" name="typeViaVol" required>
                             <option value="">Seleccione:</option>
@@ -243,23 +243,23 @@
                             <option value="Urbanizacion">Urbanización</option>
                         </select>
                         <br />
-                        <p id="typeViaError" class="formError">El Tipo de vía es obligatorio.</p>
+                        <label id="typeViaError" class="formError" for="typeViaVol">Error, el tipo de vía es obligatoria.</label>
                     </div>
                     <div class="eachRegisterElement">
                         <label id="direcVolLabel" class="formSections" for="direcVol">Dirección:<span
-                                class="redMark">*</span></label>
+                                class="redMark" aria-hidden="true">*</span></label>
                         <br />
                         <input type="text" id="direcVol" name="direcVol" required>
                         <br />
-                        <p id="direcError" class="formError">La dirección es obligatorio.</p>
+                        <label id="direcError" class="formError" for="direcVol">Error, la dirección es obligatoria.</label>
                     </div>
                     <div class="eachRegisterElement">
                         <label id="numVolLabel" class="formSections" for="numVol">Número:<span
-                                class="redMark">*</span></label>
+                                class="redMark" aria-hidden="true">*</span></label>
                         <br />
                         <input type="text" id="numVol" name="numVol" required>
                         <br />
-                        <p id="numError" class="formError">El número es obligatorio.</p>
+                        <label id="numError" class="formError" for="numVol">Error, el número es obligatorio.</label>
                     </div>
                 </div>
                 <div class="RegisterContainer">
@@ -282,29 +282,29 @@
                 <div class="RegisterContainer">
                     <div class="eachRegisterElement">
                         <label id="codPosVolLabel" class="formSections" for="codPosVol">Código Postal:<span
-                                class="redMark">*</span></label>
+                                class="redMark" aria-hidden="true">*</span></label>
                         <br />
                         <input type="text" id="codPosVol" name="codPosVol" required>
                         <br />
-                        <p id="codPosError" class="formError">El código postal es obligatorio.</p>
-                        <p id="codPosMal" class="formError">El código postal no es valido.</p>
+                        <label id="codPosError" class="formError" for="codPosVol">Error, el código postal es obligatorio.</label>
+                        <label id="codPosMal" class="formError" for="codPosVol">Error, el código postal no es válido.</label>
 
                     </div>
                     <div class="eachRegisterElement">
                         <label id="stateVolLabel" class="formSections" for="stateVol">Provincia:<span
-                                class="redMark">*</span></label>
+                                class="redMark" aria-hidden="true">*</span></label>
                         <br />
                         <input type="text" id="stateVol" name="stateVol" readonly>
                         <br />
-                        <p id="stateError" class="formError">El provincia es obligatorio.</p>
+                        <label id="stateError" class="formError" for="stateVol">El provincia es obligatoria.</label>
                     </div>
                     <div class="eachRegisterElement">
                         <label id="townVolLabel" class="formSections" for="townVol">Localidad:<span
-                                class="redMark">*</span></label>
+                                class="redMark" aria-hidden="true">*</span></label>
                         <br />
                         <input type="text" id="townVol" name="townVol" required>
                         <br />
-                        <p id="townError" class="formError">La localidad es obligatorio.</p>
+                        <label id="townError" class="formError" for="townVol">La localidad es obligatoria.</label>
                     </div>
                 </div>
                 <div class="fullRegisterContainer">

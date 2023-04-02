@@ -1,0 +1,73 @@
+.toolbar{
+    background-color: blueviolet;
+    position: fixed;
+    right:0;
+    top:10em;
+    height: 2.7em;
+    border: 1px solid blue;
+
+}
+
+.toggle-icon{
+    width: 34px;
+
+}
+
+.toolbar-toggle{
+    width:64px;
+    position: absolute;
+    background-color: white;
+    top: 0;
+    left: -4.2em;
+    border: 1px solid blue;
+    height: 70px;
+    padding: 15px 15px;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+
+}
+
+.toolbar-inner{
+    background-color: white;
+      /* cambiar para mover la posición de la toolbar */
+    right:0;
+    top:10em;
+    width: 15.5em;
+    border: 1px solid blue;
+    transition: 0.5s ease;
+    /* transform: translateX(15.5em); */
+
+}
+
+.toolbar-inner p{
+    height: 70px;
+    font-size: 18px;
+    padding: 15px 10px;
+    
+}
+
+.toolbar-item{
+    color: black;
+    height: 50px;
+    font-size: 18px;
+    padding: 15px 10px;
+    border: 1px solid red;
+    transition: 0.3s ease;
+    
+}
+
+.toolbar-icon{
+    width: 20px;
+}
+
+.toolbar-items li:hover{
+    background-color: aqua;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+
+.toolbar-item li a{
+    display:block;
+    text-decoration: none;
+    letter-spacing: 1px;
+}

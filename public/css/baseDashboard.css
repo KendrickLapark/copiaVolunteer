@@ -1481,7 +1481,7 @@ div.logo-details {
 .nameVolMyProfile{
     font-size: 24px;
     font-weight: bold;
-    padding: 2%;
+    padding-inline: 2%;
 
 }
 

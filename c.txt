@@ -1,0 +1,4 @@
+composer require blade-ui-kit/blade-heroicons
+composer require codeat3/blade-vaadin-icons
+composer require codeat3/blade-simple-line-icons
+composer require andreiio/blade-remix-icon

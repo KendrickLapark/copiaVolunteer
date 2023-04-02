@@ -6,6 +6,8 @@ use App\Models\Delegation;
 use App\Models\TypeActivity;
 use App\Models\Activity;
 use App\Models\Inscription;
+use App\Models\Entity;
+use App\Models\Activity_Entity;
 use Illuminate\Support\Facades\Auth;
 
 use Illuminate\Http\Request;
@@ -24,21 +26,20 @@ class ActivityController extends Controller
     public function formCreateActivity()
     {
         $activityTypes = TypeActivity::all();
-        return view("dashboard.createActivity", compact("activityTypes"));
+        $entities = Entity::all();
+        return view("dashboard.createActivity", compact("activityTypes", 'entities'));
     }
 
     public function showActivitiesGenially()
     {
 
         return view("dashboard.showActivitiesGenially");
-
     }
 
     public function showWeekCalendarGenially()
     {
 
         return view("dashboard.showWeekCalendarGenially");
-
     }
 
     public function saveActivity(Request $request)
@@ -46,7 +47,6 @@ class ActivityController extends Controller
         $request->validate([
             'nameAct' => 'required',
             'descAct' => 'required',
-            'entityAct' => 'required',
             'timeAct' => 'required',
             'dateAct' => 'required',
             'quotasAct' => 'required',
@@ -56,7 +56,6 @@ class ActivityController extends Controller
         
         $activity->nameAct = $request->nameAct;
         $activity->descAct = $request->descAct;
-        $activity->entityAct = $request->entityAct;
         $activity->timeAct = $request->timeAct;
         $activity->dateAct = $request->dateAct;
         if ($request->isPreseAct=="on"){
@@ -66,19 +65,16 @@ class ActivityController extends Controller
         }
         $activity->quotasAct = $request->quotasAct;
 
-
-
         $activity->direAct = $request->direAct;
         $activity->requiPrevAct = $request->requiPrevAct;
         $activity->requiAct = $request->requiAct;
         $activity->formaAct = $request->formaAct;
         $activity->endTimeAct = $request->endTimeAct;
 
-
         $activity->save();
         $activity->typeAct()->attach($request->ActTypes);
-
-
+        $activity->entity()->attach($request->Entities, ['dateAct' => $request -> dateAct]);
+        
         session()->flash('sucessActivityCreated', 'Se ha CREADO una ACTIVIDAD.');
         return redirect()->route('dashboard.showAllActivities');
     }
@@ -94,8 +90,6 @@ class ActivityController extends Controller
         session()->flash('sucessActivityDeleted', 'Se ha BORRADO una ACTIVIDAD.');
        return redirect()->route('dashboard.showAllActivities');
     }
-
-    /**/
 
     public function doVisible(Request $request)
     {
@@ -128,10 +122,10 @@ class ActivityController extends Controller
     {
         try{
             $activity = Activity::where('activity_id',$request->id)->first();
-
             $activityTypes = TypeActivity::all();
+            $entities = Entity::all();
 
-            return view('dashboard.showUpdateActivityForm', compact("activity","activityTypes"));
+            return view('dashboard.showUpdateActivityForm', compact("activity","activityTypes",'entities'));
     
 
 
@@ -145,7 +139,6 @@ class ActivityController extends Controller
         $request->validate([
             'nameAct' => 'required',
             'descAct' => 'required',
-            'entityAct' => 'required',
             'timeAct' => 'required',
             'dateAct' => 'required',
             'quotasAct' => 'required',
@@ -167,7 +160,6 @@ class ActivityController extends Controller
         $activity->update([
                     'nameAct' => $request->nameAct,
                     'descAct' => $request->descAct,
-                    'entityAct' => $request->entityAct,
                     'timeAct' => $request->timeAct,
                     'dateAct' => $request->dateAct,
                     'quotasAct' => $request->quotasAct,  
@@ -184,6 +176,10 @@ class ActivityController extends Controller
         $activity->typeAct()->detach();
 
         $activity->typeAct()->attach($request->ActTypes);
+
+        $activity->entity()->detach();
+
+        $activity->entity()->attach($request->Entities, ['dateAct' => $request -> dateAct]);
 
         session()->flash('sucessActivityUpdated', 'Se ha ACTUALIZADO una ACTIVIDAD.');
         return redirect()->route('dashboard.showAllActivities');
@@ -205,9 +201,8 @@ class ActivityController extends Controller
     public function showActivitiesByCategory(){
 
         $delegations = Delegation::all();
-        $activityTypes = TypeActivity::all();
+        $activityTypes = TypeActivity::all();    
         return view('dashboard.showActivitiesByCategory', compact("activityTypes", "delegations"));
-
     }
 
     public function showActivitiesByDate(){
@@ -236,13 +231,13 @@ class ActivityController extends Controller
             return false;
     }
 
-    public function showThatActivity ($activity_id)
+    public function showThatActivity($activity_id)
     {
         $activity = Activity::where('activity_id',$activity_id)
                             ->first();
         $activityTypes = TypeActivity::all();
         return view('dashboard.showThatActivity', compact("activity","activityTypes"));
-    }
+    } 
 
     public function searchActivity(Request $request){
 
@@ -292,8 +287,7 @@ class ActivityController extends Controller
 
     public function nullActivity(Request $request)
     {
-
-        
+     
         $activity = Activity::where('activity_id',$request->id);
         $nullAct = $activity->value('isNulledAct');
 
@@ -312,7 +306,7 @@ class ActivityController extends Controller
                 $activity->nameAct,
                 $volunteer->persMailVol
             ); 
-        } */  
+        } */    
 
         session()->flash('nullActivity', $msg);
 
@@ -323,18 +317,21 @@ class ActivityController extends Controller
 
         if($request->ajax()) {
             $query = $request->get('searchDayActivity');
-            if(empty($query)) {
+            if(empty($query)) {               
                 $activities=Activity::where('dateAct','like','%'.$request->searchDayActivity.'%')->orderBy('dateAct', 'asc')->get();
                 $activityTypes = TypeActivity::all();
+                $entities = Entity::all();
             } else {
                 $activities=Activity::where('dateAct','like','%'.$request->searchDayActivity.'%')->orderBy('dateAct', 'asc')->get();
-                $activityTypes = TypeActivity::all();
+                $activityTypes = TypeActivity::all();                
+                $entities = Entity::all();
             }
             $total = $activities->count();
         
             $html = view('dashboard.partials.itemDayAct', [
                 'activities' => $activities,
                 'activityTypes' => $activityTypes,
+                'entities' => $entities,
                 'query' => $query,
             ])->render();             
         

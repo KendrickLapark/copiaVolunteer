@@ -6,6 +6,7 @@
     <title>Voluntariado Magtel - @yield('title')</title>
     <link rel="stylesheet" href="<?php echo asset('css/reset.css'); ?>" type="text/css">
     <link rel="stylesheet" href="<?php echo asset('css/baseDashboard.css'); ?>" type="text/css">
+    <link rel="stylesheet" href="<?php echo asset('css/toolbar.toggle.css'); ?>" type="text/css">
     <link rel="icon" type="image/png" href="<?php echo asset('images/favicon.png'); ?>" />
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
@@ -23,17 +24,23 @@
 </head>
 
 <body>
-    @include('dashboard.partials.leftBar')
+        @include('dashboard.partials.leftBar')
 
-    <section class="home-section">
+        
+
+    <div class="home-section">
         <nav>
             @include('dashboard.partials.header')
         </nav>
 
         <div class="home-content">
-            @yield('content')
+            <main>
+                @yield('content')
+            </main>
         </div>
-    </section>
+
+        @include('dashboard.partials.toolbar_toggle')
+    </div>
 
     <script type="text/javascript">
         let sidebar = document.querySelector(".sidebar");
@@ -52,6 +59,7 @@
                 <?php session()->forget('status'); ?>
             }
         }
+        
     </script>
 
 </body>
