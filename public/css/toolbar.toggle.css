@@ -1,41 +1,75 @@
 .toolbar{
-    background-color: blueviolet;
     position: fixed;
     right:0;
     top:10em;
-    height: 2.7em;
-    border: 1px solid blue;
 
 }
 
 .toggle-icon{
     width: 34px;
+    margin: auto;
+    color:white;
+    cursor: pointer;
 
 }
 
-.toolbar-toggle{
+
+
+input{
+    width:64px;
+    height: 128px;
+    position: absolute;
+    background-color: #004a98;
+    top: -2.6em;
+    left: -4em;
+    border: 1px solid #004a98;
+    transition: ease 0.3s;
+    display: none;
+    
+}
+
+.io{
+    transition: ease 0.3s;
+}
+
+#check:checked ~ .toolbar-overlay{
+    transform: translateX(240px);
+}
+
+#check:checked{
+    transform: translateX(240px);
+}
+
+#check:checked ~ .io{
+    transform: translateX(240px);
+}
+
+.icon-overlay{
     width:64px;
     position: absolute;
-    background-color: white;
-    top: 0;
+    padding-left: 15px;
+    padding-block: 15px;
+    background-color: #004a98;
+    top: 0em;
     left: -4.2em;
-    border: 1px solid blue;
-    height: 70px;
-    padding: 15px 15px;
-    border-top-left-radius: 25px;
-    border-bottom-left-radius: 25px;
+    border: 1px solid #004a98;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    transition: ease 0.3s;
+    
+}
 
+.toolbar-overlay{
+    transition: ease 0.3s;
 }
 
 .toolbar-inner{
     background-color: white;
-      /* cambiar para mover la posición de la toolbar */
     right:0;
     top:10em;
     width: 15.5em;
-    border: 1px solid blue;
+    border: 1px solid #004a98;
     transition: 0.5s ease;
-    /* transform: translateX(15.5em); */
 
 }
 
@@ -47,11 +81,10 @@
 }
 
 .toolbar-item{
-    color: black;
+    color: #004a98;
     height: 50px;
     font-size: 18px;
     padding: 15px 10px;
-    border: 1px solid red;
     transition: 0.3s ease;
     
 }
@@ -61,7 +94,7 @@
 }
 
 .toolbar-items li:hover{
-    background-color: aqua;
+    background-color: #e8f1fa;
     cursor: pointer;
     letter-spacing: 1px;
 }

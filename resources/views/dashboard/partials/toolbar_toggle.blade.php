@@ -1,7 +1,10 @@
 <div class="toolbar">
-    <div class="toolbar-toggle">
-        <a href=""><x-vaadin-accessibility class="toggle-icon"/></a>
-    </div>
+    <input type="checkbox" name="" id="check">
+        <div class="io">
+            <label for="check" id="overlay1">
+                <span class=icon-overlay> <x-vaadin-accessibility class="toggle-icon"/> </span>
+            </label>
+        </div>
 
     <div class="toolbar-overlay">
 
