@@ -13,7 +13,7 @@
 
 }
 
-input{
+#check{
     width:64px;
     height: 128px;
     position: absolute;
@@ -83,7 +83,6 @@ input{
     text-decoration: none;
     row-gap: 3em;
     color: #004a98;
-    height: 50px;
     font-size: 18px;
     padding: 15px 10px;
     transition: 0.3s ease;
