@@ -1,6 +1,6 @@
 .toolbar{
     position: fixed;
-    right:0;
+    right:-240px;
     top:10em;
 
 }
@@ -12,8 +12,6 @@
     cursor: pointer;
 
 }
-
-
 
 input{
     width:64px;
@@ -28,20 +26,20 @@ input{
     
 }
 
-.io{
+.toggle-overlay{
     transition: ease 0.3s;
 }
 
 #check:checked ~ .toolbar-overlay{
-    transform: translateX(240px);
+    transform: translateX(-240px);
 }
 
 #check:checked{
-    transform: translateX(240px);
+    transform: translateX(-240px);
 }
 
-#check:checked ~ .io{
-    transform: translateX(240px);
+#check:checked ~ .toggle-overlay{
+    transform: translateX(-240px);
 }
 
 .icon-overlay{
@@ -55,6 +53,7 @@ input{
     border: 1px solid #004a98;
     border-top-left-radius: 50px;
     border-bottom-left-radius: 50px;
+    cursor: pointer;
     transition: ease 0.3s;
     
 }
@@ -81,12 +80,22 @@ input{
 }
 
 .toolbar-item{
+    text-decoration: none;
+    row-gap: 3em;
     color: #004a98;
     height: 50px;
     font-size: 18px;
     padding: 15px 10px;
     transition: 0.3s ease;
     
+}
+
+.toolbar-title{
+    font-weight: bold;
+}
+
+.toolbar-text{
+    color: black;
 }
 
 .toolbar-icon{

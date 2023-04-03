@@ -1,6 +1,6 @@
 <div class="toolbar">
     <input type="checkbox" name="" id="check">
-        <div class="io">
+        <div class="toggle-overlay">
             <label for="check" id="overlay1">
                 <span class=icon-overlay> <x-vaadin-accessibility class="toggle-icon"/> </span>
             </label>
