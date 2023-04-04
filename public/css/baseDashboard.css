@@ -1,3 +1,12 @@
+/*modifica el contenido de la página web a escala de grises*/
+
+/* html {
+    -moz-filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    filter: gray; 
+    filter: grayscale(100%);
+} */
+
 body {
     background-color: #ffffff;
     font-family: "Lato", Sans-serif;

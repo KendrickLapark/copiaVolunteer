@@ -2,6 +2,7 @@
     position: fixed;
     right:-240px;
     top:10em;
+    word-wrap: break-word;
 
 }
 

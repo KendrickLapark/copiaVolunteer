@@ -14,12 +14,12 @@
 
                 <ul class="toolbar-items">
 
-                    <li class="toolbar-item"> 
-                        <a href="">
+                    <li class="toolbar-item" id="ti1"> 
+                        <a href="#">
                             <span class="toolbar-text"> <x-heroicon-o-magnifying-glass-plus class="toolbar-icon"/> Aumentar texto </span>
                         </a>
                     </li>
-                    <li class="toolbar-item"> 
+                    <li class="toolbar-item" id="ti2"> 
                         <a href="">
                             <span class="toolbar-text"> <x-heroicon-o-magnifying-glass-minus class="toolbar-icon"/> Disminuir texto </span>
                         </a>
