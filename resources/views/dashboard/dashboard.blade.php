@@ -11,7 +11,7 @@
             <div class="sectionTitle">
                     <i class='bx bx-envelope'></i>
                     {{-- <span class="badge"> </span> --}}
-                        Tienes notificaciones
+                        <p> Tienes notificaciones </p>
                     <i class='bx bx-caret-right' style="font-size: 20px"></i>
                     
             </div>
@@ -21,7 +21,7 @@
             <div class="sectionTitle">
                     <i class='bx bx-envelope'></i>
                     {{-- <span class="badge"> </span> --}}
-                        No tienes notificaciones
+                      <p> No tienes notificaciones </p>
                     <i class='bx bx-caret-right'></i>
                     
             </div>
@@ -29,7 +29,7 @@
     @endif 
         @if (count($inscriptions) == 0)         
             <div class="sectionTitleNoInscriptions">
-                No tienes inscripciones hechas en ninguna actividad.
+               <p> No tienes inscripciones hechas en ninguna actividad. </p>
             </div>                          
         @else     
         <div class="listTrayDashboard" id="#listTrayDashboard">         
@@ -39,36 +39,36 @@
                         @include('dashboard.partials.itemListInscription')
                     @elseif($inscription->filenameIns != null)
                         <div class="msg_Inscription">
-                            Inscripcion realizada para actividad : {{$inscription->activity->nameAct}}
+                           <p> Inscripcion realizada para actividad : {{$inscription->activity->nameAct}} </p>
                             <i class='bx bx-caret-down' id="downArrow" ></i>
                         </div> 
                         <div class="hidden_msg_Inscription">
                             <div class="inner_hidden_msg_Inscription">
                                 <div class="descIns">
-                                    <strong> Descripción: </strong>
-                                    {{$inscription->activity->descAct}}
+                                  <p>  <strong> Descripción: </strong> 
+                                    {{$inscription->activity->descAct}} </p>
                                 </div>
                                 <div class="entityIns">
-                                    <strong> Entidad: </strong>
-                                    {{$inscription->activity->entityAct}}
+                                  <p>  <strong> Entidad: </strong> 
+                                    {{$inscription->activity->entityAct}} </p>
                                 </div>
                                 <div class="direIns">
-                                    <strong> Dirección: </strong>
-                                    {{$inscription->activity->direAct}}
+                                  <p> <strong> Dirección: </strong> 
+                                    {{$inscription->activity->direAct}} </p>
                                 </div>
                                 <div class="dateIns">
-                                    <strong> Fecha: </strong>
-                                    {{$inscription->activity->dateAct}}
+                                  <p>  <strong> Fecha: </strong> 
+                                    {{$inscription->activity->dateAct}} </p>
                                 </div>
                                 <div class="timeIns">
-                                    <strong> Hora: </strong>
-                                    {{$inscription->activity->timeAct}}
+                                   <p> <strong> Hora: </strong> 
+                                    {{$inscription->activity->timeAct}} </p>
                                 </div>
                                 <div class="isCompletedIns">
                                     @if($inscription->isCompletedIns)
-                                        <strong> Inscripción completada </strong>
+                                      <p>  <strong> Inscripción completada </strong> </p>
                                     @else
-                                        <strong> Inscripción incompleta, esperando aceptación administradora </strong>
+                                      <p>  <strong> Inscripción incompleta, esperando aceptación administradora </strong> </p>
                                     @endif
                                 </div>
                                 <form method="POST" action="{{ route('PDF.generatepreinscription') }}">

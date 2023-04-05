@@ -7,6 +7,11 @@
     filter: grayscale(100%);
 } */
 
+main{
+    overflow: auto;
+
+}
+
 body {
     background-color: #ffffff;
     font-family: "Lato", Sans-serif;

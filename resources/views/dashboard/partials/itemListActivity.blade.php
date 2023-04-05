@@ -9,22 +9,22 @@
                     @else
                         <div class="divTime" style="background-color:#8A8A8A";>
                     @endif                               
-                            <div class="dateDiv"> {{ date('d-m-Y', strtotime($activity->dateAct)) }}</div>
-                            <div class="hourDiv"> {{ date('H:i', strtotime($activity->timeAct)) }}</div> 
+                            <div class="dateDiv"> <p> {{ date('d-m-Y', strtotime($activity->dateAct)) }} </p> </div>
+                            <div class="hourDiv"> <p> {{ date('H:i', strtotime($activity->timeAct)) }} </p> </div> 
                         </div>
                         
                         <div class="divMainDesc">
                             <div class="nameDiv">
-                                <strong> {{ $activity->nameAct }} </strong>
+                                <p> <strong> {{ $activity->nameAct }} </strong> </p>
                             </div>
                             <div class="descDiv">
-                                {{$activity->descAct}}
+                                <p> {{$activity->descAct}} </p>
                             </div>
                             <div class="cupoDiv">
-                                <strong>Cupo: </strong>
+                                <p> <strong>Cupo: </strong>
                                 {{ App\Http\Controllers\ActivityController::quotaCalculator($activity->quotasAct, $activity->activity_id) }}
                                 {{ $activity->quotasAct }}
-                                Libres
+                                Libres </p>
                             </div>
                         </div>    
                         
@@ -64,28 +64,28 @@
             <div class="hidden">
                 <div class="eachRow">
                     <div>
-                        <strong>Descripcion: </strong>
-                         {{ $activity->descAct }}
+                         <p> <strong>Descripcion: </strong>
+                         {{ $activity->descAct }} </p>
                     </div>
                     <div>
-                        <strong>Entidad: </strong>
-                        {{ $activity->entityAct }}
+                        <p> <strong>Entidad: </strong>
+                        {{ $activity->entityAct }} </p>
                     </div>
                     <div>
-                        <strong>Dirección: </strong>
-                        {{ $activity->direAct }}
+                        <p> <strong>Dirección: </strong>
+                        {{ $activity->direAct }} </p>
                     </div>
                     <div>
-                        <strong>Requisito Previo: </strong>
-                        {{ $activity->requiPrevAct }}
+                        <p> <strong>Requisito Previo: </strong>
+                        {{ $activity->requiPrevAct }} </p>
                     </div>
                     <div>
-                        <strong>Formacion deseada: </strong>
-                        {{ $activity->formaAct }}
+                        <p> <strong>Formacion deseada: </strong>
+                        {{ $activity->formaAct }} </p>
                     </div>
                     <div>
-                        <strong>Requisitos: </strong>
-                        {{ $activity->requiAct }}
+                        <p> <strong>Requisitos: </strong>
+                        {{ $activity->requiAct }} </p>
                     </div>
                 </div>
                 <div class="eachRow">

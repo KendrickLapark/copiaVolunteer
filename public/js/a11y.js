@@ -9,12 +9,12 @@ $(() => {
                 //indica el fontsize
                var fs =  window.getComputedStyle(document.getElementById('ti1')).fontSize;
 
-                /* alert("font-size "+fs); */
+               var np = fs.replace("px", "");
 
-                if(resize<200){
+                alert("font-size "+np);
+
+                if(resize<60){
                     resize+= 10;
-                }else{
-                    resize = 18;
                 }
                 
                 $('.sectionTitle').css('font-size', resize+"px");
@@ -27,10 +27,15 @@ $(() => {
 
                 var fs =  window.getComputedStyle(document.getElementById('ti1')).fontSize;
 
-                /* alert("font-size "+fs); */
+                var np = fs.replace("px", "");
 
+                alert("font-size "+fs); 
+                alert("resize"+resize);
+
+                if(resize>20){
                     resize-= 10;
-                
+                }
+     
                 $('.sectionTitle').css('font-size', resize+"px");
                 $('.toolbar-item').css('font-size', resize+"px");
                 $('p').css('font-size', resize+"px");
@@ -48,12 +53,12 @@ $(() => {
                     $(htmlElement).css('-webkit-filter', 'grayscale(100%)');
                     $(htmlElement).css('filter', 'grayscale(100%)');              
                     $(htmlElement).css('filter', 'gray');
-                    grayscale = true;
+                        grayscale = true;
                 }else{
                     $(htmlElement).css('-moz-filter', 'grayscale(0%)');
                     $(htmlElement).css('-webkit-filter', 'grayscale(0%)');
                     $(htmlElement).css('filter', 'grayscale(0%)');          
-                    grayscale = false;
+                        grayscale = false;
                 }
                 
             });
