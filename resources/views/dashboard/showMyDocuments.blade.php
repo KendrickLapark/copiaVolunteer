@@ -7,7 +7,7 @@
 @section('content')
     <div class="mainTray ">
         <div class="sectionTitle">
-            MUESTRA MIS DOCUMENTOS
+           <p> MUESTRA MIS DOCUMENTOS </p>
         </div>
 
         @if (session()->has('deleteDocument'))
@@ -21,7 +21,7 @@
             <div class="mainDataShowMyDocuments">
                 <div class="row">
                     <div>
-                        {{ $document->titleDoc }}
+                        <p> {{ $document->titleDoc }} </p>
                     </div>
                     <div>
                         @if (!$document->isContactModelVol && !$document->isInscripModelVol)

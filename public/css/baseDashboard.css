@@ -11,6 +11,7 @@ body {
     background-color: #ffffff;
     font-family: "Lato", Sans-serif;
     font-size: 15px;
+    overflow-y: auto;
 }
 
 /* Googlefont Lato CDN Link */

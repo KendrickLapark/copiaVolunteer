@@ -2,8 +2,7 @@
     position: fixed;
     right:-240px;
     top:10em;
-    word-wrap: break-word;
-
+    
 }
 
 .toggle-icon{
@@ -69,7 +68,7 @@
     top:10em;
     width: 15.5em;
     border: 1px solid #004a98;
-    transition: 0.5s ease;
+    transition: 0.5s ease; 
 
 }
 
@@ -85,7 +84,7 @@
     color: #004a98;
     font-size: 18px;
     padding: 15px 10px;
-    transition: 0.3s ease;
+    transition: 0.3s ease; 
     
 }
 
