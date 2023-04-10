@@ -70,8 +70,6 @@ $(() => {
 
             var color = estilazo.color;
 
-            alert(color);
-
             $('#ti4').click(function(){
 
                 if(high_contrast){
