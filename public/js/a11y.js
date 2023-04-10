@@ -11,7 +11,7 @@ $(() => {
 
                var np = fs.replace("px", "");
 
-                alert("font-size "+np);
+                /* alert("font-size "+np); */
 
                 if(resize<60){
                     resize+= 10;
@@ -29,8 +29,8 @@ $(() => {
 
                 var np = fs.replace("px", "");
 
-                alert("font-size "+fs); 
-                alert("resize"+resize);
+                /* alert("font-size "+fs); 
+                alert("resize"+resize); */
 
                 if(resize>20){
                     resize-= 10;
@@ -61,6 +61,29 @@ $(() => {
                         grayscale = false;
                 }
                 
+            });
+
+            var high_contrast = false;
+            var icon_sidebar = document.getElementsByClassName('.sidebar i');  
+            var elementium = document.querySelector('i');
+            var estilazo = getComputedStyle(elementium);
+
+            var color = estilazo.color;
+
+            alert(color);
+
+            $('#ti4').click(function(){
+
+                if(high_contrast){
+                    alert("desactivando");
+                    elementium.style.color = 'red';
+                    high_contrast = false;
+                }else{
+                    alert("activando");
+                    elementium.style.color = 'blue';
+                    hight_contrast = true;
+                }
+
             });
 
 });

@@ -29,22 +29,22 @@
                             <span class="toolbar-text" > <x-vaadin-barcode class="toolbar-icon"/> Escala de grises </span>
                         </a>
                     </li>
-                    <li class="toolbar-item">
+                    <li class="toolbar-item" id="ti4">
                         <a href="#">
                             <span class="toolbar-text"> <x-ri-contrast-fill class="toolbar-icon"/> Alto contraste </span>
                         </a>
                     </li>
-                    <li class="toolbar-item">
+                    <li class="toolbar-item" id="ti5">
                         <a href="#">
                             <span class="toolbar-text"> <x-vaadin-eye class="toolbar-icon"/> Contraste negativo </span>
                         </a>
                     </li>
-                    <li class="toolbar-item">
+                    <li class="toolbar-item" id="ti6">
                         <a href="#">
                             <span class="toolbar-text"> <x-vaadin-lightbulb class="toolbar-icon"/> Fondo claro </span>
                         </a>
                     </li>
-                    <li class="toolbar-item">
+                    <li class="toolbar-item" id="ti7">
                         <a href="#">
                             <span class="toolbar-text"> <x-simpleline-reload class="toolbar-icon"/> Restablecer </span>
                         </a>

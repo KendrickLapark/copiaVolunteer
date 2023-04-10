@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="<?php echo asset('css/toolbar.toggle.css'); ?>" type="text/css">
     <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
     <link rel="icon" type="image/png" href="<?php echo asset('images/favicon.png'); ?>" />
+    <script type="text/javascript" src="{{ URL::asset('js/a11y.js') }}"></script>
 
     @yield('library')
 </head>
