@@ -15,37 +15,37 @@
                 <ul class="toolbar-items">
 
                     <li class="toolbar-item" id="ti1"> 
-                        <a href="#">
+                        <a href="#/">
                             <span class="toolbar-text"> <x-heroicon-o-magnifying-glass-plus class="toolbar-icon"/> Aumentar texto </span>
                         </a>
                     </li>
                     <li class="toolbar-item" id="ti2"> 
-                        <a href="#">
+                        <a href="#/">
                             <span class="toolbar-text"> <x-heroicon-o-magnifying-glass-minus class="toolbar-icon"/> Disminuir texto </span>
                         </a>
                     </li>
                     <li class="toolbar-item" id="ti3">
-                        <a href="#">
+                        <a href="#/">
                             <span class="toolbar-text" > <x-vaadin-barcode class="toolbar-icon"/> Escala de grises </span>
                         </a>
                     </li>
                     <li class="toolbar-item" id="ti4">
-                        <a href="#">
+                        <a href="#/">
                             <span class="toolbar-text"> <x-ri-contrast-fill class="toolbar-icon"/> Alto contraste </span>
                         </a>
                     </li>
                     <li class="toolbar-item" id="ti5">
-                        <a href="#">
+                        <a href="#/">
                             <span class="toolbar-text"> <x-vaadin-eye class="toolbar-icon"/> Contraste negativo </span>
                         </a>
                     </li>
                     <li class="toolbar-item" id="ti6">
-                        <a href="#">
+                        <a href="#/">
                             <span class="toolbar-text"> <x-vaadin-lightbulb class="toolbar-icon"/> Fondo claro </span>
                         </a>
                     </li>
                     <li class="toolbar-item" id="ti7">
-                        <a href="#">
+                        <a href="#/">
                             <span class="toolbar-text"> <x-simpleline-reload class="toolbar-icon"/> Restablecer </span>
                         </a>
                     </li>

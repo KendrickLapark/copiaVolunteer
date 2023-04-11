@@ -102,6 +102,6 @@
             }
         }, 5000);
 
-    </script>
+    </script> 
 
 @endsection
