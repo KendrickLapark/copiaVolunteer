@@ -49,6 +49,10 @@ $(() => {
             $('nav').css('background', nav_bc);
         }
 
+        if($('.home-content')[0]){
+            var home_content_bc = getComputedStyle(document.querySelector('.home-content')).backgroundColor;
+        }
+
         if($('.sidebar')[0]){
             var sidebar_bc = getComputedStyle(document.querySelector('.sidebar')).backgroundColor;
         }
@@ -61,8 +65,52 @@ $(() => {
             var sidebar_li_bc = getComputedStyle(document.querySelector('.sidebar li')).backgroundColor; 
         }
 
+        if($('.sectionTitle')[0]){
+            var sectionTitle_bc = getComputedStyle(document.querySelector('.sectionTitle')).backgroundColor; 
+        }
+
+        if($('.home-section')[0]){
+            var home_section_bc = getComputedStyle(document.querySelector('.home-section')).backgroundColor;
+        }
+
+        if($('.mainTrayDashboard')[0]){
+            var mainTrayDashboard_bc = getComputedStyle(document.querySelector('.mainTrayDashboard')).backgroundColor;
+        }
+
+        if($('.notifyTray')[0]){
+            var notifyTray_bc = getComputedStyle(document.querySelector('.notifyTray')).backgroundColor;
+        }
+
+        if($('main')[0]){
+            var main_bc = getComputedStyle(document.querySelector('main')).backgroundColor;
+        }
+
+        if($('.profile-details')[0]){
+            var profile_details_bc = getComputedStyle(document.querySelector('.profile-details')).backgroundColor; 
+        }
+
         if($('.logo-details')[0]){
             var logo_details_bc = getComputedStyle(document.querySelector('.logo-details')).backgroundColor; 
+        }
+
+        if($('.mainActivityDashboard')[0]){
+            var mainActivityDashboard_bc = getComputedStyle(document.querySelector('.mainActivityDashboard')).backgroundColor;      
+        }
+
+        if($('.listTrayDashboard')[0]){
+            var listTrayDashboard_bc = getComputedStyle(document.querySelector('.listTrayDashboard')).backgroundColor;
+        }
+
+        if($('.msg_Inscription')[0]){
+            var msg_Inscription_bc = getComputedStyle(document.querySelector('.msg_Inscription')).backgroundColor;
+        }
+
+        if($('.hidden_msg_Inscription')[0]){
+            var hidden_msg_Inscription_bc = getComputedStyle(document.querySelector('.hidden_msg_Inscription')).backgroundColor;
+        }
+
+        if($('.inner_hidden_msg_Inscription')[0]){
+            var inner_hidden_msg_Inscription_bc = getComputedStyle(document.querySelector('.inner_hidden_msg_Inscription')).backgroundColor;
         }
         
         /* var sidebar_bc = getComputedStyle(document.querySelector('.sidebar')).backgroundColor;
@@ -97,8 +145,36 @@ $(() => {
                 $('#spaceTopMenu').css('background', spaceTopMenu_bc);
             }
 
+            if($('.mainTrayDashboard')[0]){
+                $('.mainTrayDashboard').css('background', mainTrayDashboard_bc);
+            }
+
+            if($('.notifyTray')[0]){
+                $('.notifyTray').css('background', notifyTray_bc);
+            }
+
+            if($('main')[0]){
+                $('main').css('background', main_bc);
+            }
+
+            if($('.home-content')[0]){
+                $('.home-content').css('background', home_content_bc);
+            }
+
+            if($('.profile-details')[0]){
+                $('.profile-details').css('background', profile_details_bc);
+            }
+
             if($('.logo-details')[0]){
                 $('.logo-details').css('background', logo_details_bc);
+            }
+
+            if($('.home-section')[0]){
+                $('.home-section').css('background', home_section_bc);
+            }
+
+            if($('.sectionTitle')[0]){
+                $('.sectionTitle').css('background', sectionTitle_bc);
             }
 
             if($('.sidebar-button')[0]){
@@ -129,12 +205,34 @@ $(() => {
                 $('.sidebar li').css('background', sidebar_bc);
             }
 
+            if($('.mainActivityDashboard')[0]){
+                $('.mainActivityDashboard').css('background', mainActivityDashboard_bc);
+            }
+
+            if($('.listTrayDashboard')[0]){
+                $('.listTrayDashboard').css('background', listTrayDashboard_bc);
+            }  
+            
+            if($('.msg_Inscription')[0]){
+                $('.msg_Inscription').css('background', msg_Inscription_bc);
+            }
+
+            if($('.hidden_msg_Inscription')[0]){
+                $('.hidden_msg_Inscription').css('background', hidden_msg_Inscription_bc);
+            }
+
+            if($('.inner_hidden_msg_Inscription')[0]){
+                $('.inner_hidden_msg_Inscription').css('background', inner_hidden_msg_Inscription_bc);
+            }
+
             /* $('nav').css('background', nav_bc); */
             /* $('.home-section').css('background', home_section_bc); */
-            $('.toolbar-inner').css('background', toolbar_inner_bc);
+            $('.toolbar-inner').css('background', toolbar_inner_bc);            
             /* $('#spaceTopMenu').css('background', spaceTopMenu_bc); */
             /* $('div').css('background', div_bc); */
             /* $('.mainData').css('background', mainData_bc); */
+
+            
 
         }
 

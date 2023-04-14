@@ -48,8 +48,7 @@
                         <a href="#/">
                             <span class="toolbar-text"> <x-simpleline-reload class="toolbar-icon"/> Restablecer </span>
                         </a>
-                    </li>
-
+                    </li>      
                 </ul>
 
         </div>
